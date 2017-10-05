@@ -26,3 +26,11 @@ Route::get('/acudiente', function () {
 Route::get('/diario', function () {
     return view('/diario');
 });
+
+Route::get('/admin', function () {
+    return view('admin.usuarios.crear-usuario');
+});
+
+Route::group([],function(){
+    Route::resource('usuario','UsuarioController');
+});
