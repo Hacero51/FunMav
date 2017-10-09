@@ -34,7 +34,7 @@ class UsuarioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        array(dd($request->toArray()));
     }
 
     /**

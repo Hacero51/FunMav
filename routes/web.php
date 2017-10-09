@@ -34,3 +34,15 @@ Route::get('/admin', function () {
 Route::group([],function(){
     Route::resource('usuario','UsuarioController');
 });
+
+
+
+// Registration routes...
+Route::get('register', [
+    'uses'=>'Auth\RegisterController@getRegister',
+    'as'=>'register'
+]);
+Route::post('register', [
+    'uses'=>'Auth\RegisterController@postRegister',
+    'as'=>'register'
+]);
