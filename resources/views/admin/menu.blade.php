@@ -4,7 +4,7 @@
         <li class="active">
             <a href="index.html">
                 <i class="material-icons">home</i>
-                <span>Home</span>
+                <span>Inicio</span>
             </a>
         </li>
         <li>
