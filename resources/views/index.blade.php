@@ -151,6 +151,9 @@
                             <a href="{!!URL::to('/diario')!!}">Diario terapeutico</a>
                         </li>
                         <li>
+                            <a href="{!!URL::to('/hc')!!}">Historia clinica</a>
+                        </li>
+                        <li>
                             <a href="pages/forms/basic-form-elements.html">Basic Form Elements</a>
                         </li>
                         <li>

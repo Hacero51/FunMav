@@ -27,6 +27,10 @@ Route::get('/diario', function () {
     return view('/diario');
 });
 
+Route::get('/hc', function () {
+    return view('/hc');
+});
+
 Route::get('/admin', function () {
     return view('admin.usuarios.crear-usuario');
 });
