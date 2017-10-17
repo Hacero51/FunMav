@@ -11,115 +11,116 @@
 @section('contenido')
 <!-- Advanced Form Example With Validation -->
 <div class="container-fluid">
-    <div class="block-header">
-        <h2>
-            FORM VALIDATION
-            <small>Taken from <a href="https://jqueryvalidation.org/" target="_blank">jqueryvalidation.org</a></small>
-        </h2>
-    </div>
     <!-- Basic Validation -->
     <div class="row clearfix">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="header">
-                    <h2>BASIC VALIDATION</h2>
-                    <ul class="header-dropdown m-r--5">
-                        <li class="dropdown">
-                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <i class="material-icons">more_vert</i>
-                            </a>
-                            <ul class="dropdown-menu pull-right">
-                                <li><a href="javascript:void(0);">Action</a></li>
-                                <li><a href="javascript:void(0);">Another action</a></li>
-                                <li><a href="javascript:void(0);">Something else here</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <h1>Registro Usuario</h1>
                 </div>
                 <div class="body">
-                    <form id="form_validation" method="POST" action="{{url('usuario')}}">
+                    {!!Form::open(['route'=>'usuario.store','method'=>'POST'])!!}
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        <div class="form-group form-float">
-                            <div class="form-line">
-                                <input type="text" class="form-control" name="nombres" required>
-                                <label class="form-label">Nombres</label>
-                            </div>
+                        <div class="row clearfix">
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" name="nombres" placeholder="Nombres" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" name="apellidos" placeholder="Apellidos" required>
+                                        </div>
+                                    </div>
+                                </div>
                         </div>
+                        <div class="row clearfix">
+                            <div class="col-md-6">
+                                <label class="form-label">Tipo de Docuento</label>
+                                <div class="form-line">
+                                    <input type="radio" name="tipo_documento" id="CE" class="with-gap" value="CE">
+                                    <label for="CE">C.E.</label>
 
-                        <div class="form-group form-float">
-                            <div class="form-line">
-                                <input type="text" class="form-control" name="apellidos" required>
-                                <label class="form-label">Apellidos</label>
-                            </div>
-                        </div>
-                        <div class="form-group form-float">
-                            <label class="form-label">Tipo de Docuento</label>
+                                    <input type="radio" name="tipo_documento" id="CC" class="with-gap" value="CC">
+                                    <label for="CC">C.C.</label>
 
-                            <div class="form-line">
+                                    <input type="radio" name="tipo_documento" id="TI" class="with-gap" value="TI">
+                                    <label for="TI" class="m-l-20">T.I.</label>
 
-                                <input type="radio" name="tipo_documento" id="CE" class="with-gap" value="CE">
-                                <label for="CE">C.E.</label>
-
-                                <input type="radio" name="tipo_documento" id="CC" class="with-gap" value="CC">
-                                <label for="CC">C.C.</label>
-
-                                <input type="radio" name="tipo_documento" id="TI" class="with-gap">
-                                <label for="TI" class="m-l-20">T.I.</label>
-
-                                <input type="radio" name="tipo_documento" id="RC" class="with-gap">
-                                <label for="RC" class="m-l-20">R.C.</label>
-
+                                    <input type="radio" name="tipo_documento" id="RC" class="with-gap" value="RC">
+                                    <label for="RC" class="m-l-20">R.C.</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <div class="form-line">
+                                        <input type="text" class="form-control" name="documento"  placeholder="Documento" required>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="form-group form-float">
-                            <div class="form-line">
-                                <input type="text" class="form-control" name="documento" required>
-                                <label class="form-label">Documento</label>
+                        <div class="row clearfix">
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <div class="form-line">
+                                        <textarea name="dirrecion" cols="1" rows="2" class="form-control no-resize" placeholder="Dirección" required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <div class="form-line">
+                                        <input type="tel" class="form-control" name="telefono" placeholder="Telefono" required>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="form-group form-float">
-                            <div class="form-line">
-                                <textarea name="direccion" cols="30" rows="5" class="form-control no-resize" required></textarea>
-                                <label class="form-label">Dirección</label>
+                        <div class="row clearfix">
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <div class="form-line">
+                                        <input type="email" class="form-control" name="email" placeholder="Email" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <div class="form-line">
+                                        <input type="usuario" class="form-control" name="usuario" placeholder="Usuario" required>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="form-group form-float">
-                            <div class="form-line">
-                                <input type="tel" class="form-control" name="telefono" required>
-                                <label class="form-label">Telefono</label>
+                        <div class="row clearfix">
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <div class="form-line">
+                                        <input type="password" class="form-control" name="contrasena" placeholder="Password" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <p>
+                                        <b>Tipo de Usuario</b>
+                                    </p>
+                                    <select class="form-control" name="perfil">
+                                        <option name="admin">ADMIN</option>
+                                        <option name="administrador">Administradora</option>
+                                        <option name="psicologo">Psicologa</option>
+                                        <option name="trabajadora">Trabajadora</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
-                        <div class="form-group form-float">
-                            <div class="form-line">
-                                <input type="email" class="form-control" name="email" required>
-                                <label class="form-label">Email</label>
-                            </div>
-                        </div>
-                        <div class="form-group form-float">
-                            <div class="form-line">
-                                <input type="usuario" class="form-control" name="usuario" required>
-                                <label class="form-label">Usuario</label>
-                            </div>
-                        </div>
-                        <div class="form-group form-float">
-                            <div class="form-line">
-                                <input type="password" class="form-control" name="password" required>
-                                <label class="form-label">Password</label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="checkbox" id="checkbox" name="checkbox">
-                            <label for="checkbox">I have read and accept the terms</label>
-                        </div>
-                        <button class="btn btn-primary waves-effect" type="submit">SUBMIT</button>
-                    </form>
+                        {!!Form::submit('Registrar',['class'=>'btn btn-primary waves-effect'])!!}
+                    {!! Form::close()!!}
                 </div>
             </div>
         </div>
     </div>
-    <!-- #END# Basic Validation -->
-
 </div>
-
-<!-- #END# Advanced Form Example With Validation -->
 @endsection

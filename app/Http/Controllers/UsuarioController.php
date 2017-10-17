@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\User;
 class UsuarioController extends Controller
 {
     /**
@@ -23,7 +23,7 @@ class UsuarioController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -34,7 +34,10 @@ class UsuarioController extends Controller
      */
     public function store(Request $request)
     {
-        array(dd($request->toArray()));
+        //array(dd($request->toArray()));
+
+        User::create($request->all());
+        return redirect('/usuario')->with('message','Usuario Registrado Exitosamente');
     }
 
     /**
@@ -54,9 +57,9 @@ class UsuarioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
-        //
+        return view('usuario.edit',['user'=>$this->user]);
     }
 
     /**

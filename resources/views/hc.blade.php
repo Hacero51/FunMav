@@ -78,7 +78,7 @@
                                                     <b>2.</b>
                                                 </p>
                                                 <select class="form-control">
-                                                    <option>seleccione</option>
+                                                    <option>seleccione sexo</option>
                                                     <option>Femenino</option>
                                                     <option>Masculino</option>
                                                 </select>
@@ -142,7 +142,7 @@
                                                     <b>2.</b>
                                                 </p>
                                                 <select class="form-control">
-                                                    <option>seleccion</option>
+                                                    <option>seleccion sexo</option>
                                                     <option>Femenino</option>
                                                     <option>Masculino</option>
                                                 </select>
@@ -252,6 +252,96 @@
                                         </div>
                                         <br>
                                         <h2 class="card-inside-title">II. Genograma</h2>
+                                        <div class="row clearfix">
+                                            <div class="col-md-10">
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <h2 class="card-inside-title">III.Descripcion del funcionamiento familiar.</h2>
+                                        <div class="row clearfix">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <textarea rows="4" class="form-control no-resize" placeholder=""></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h2 class="card-inside-title">IV.Motivo de la consulta.</h2>
+                                        <div class="row clearfix">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <textarea rows="4" class="form-control no-resize" placeholder=""></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h2 class="card-inside-title">V.Diagnostico (DSM IV).</h2>
+                                        <div class="row clearfix">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <textarea rows="4" class="form-control no-resize" placeholder=""></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h2 class="card-inside-title">VI.Definicion del problema.</h2>
+                                        <div class="row clearfix">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <textarea rows="4" class="form-control no-resize" placeholder=""></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h2 class="card-inside-title">VII.Sistema de Hipotesis.</h2>
+                                        <div class="row clearfix">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <textarea rows="4" class="form-control no-resize" placeholder=""></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h2 class="card-inside-title">VIII.Intervencion:</h2>
+                                        <div class="row clearfix">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <textarea rows="5" class="form-control no-resize" placeholder="A. Objectivo general"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <textarea rows="7" class="form-control no-resize" placeholder="B. Objectivo especifico"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <textarea rows="6" class="form-control no-resize" placeholder="A. Tecnicas"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h2 class="card-inside-title">IX.Observaciones.</h2>
+                                            <div class="row clearfix">
+                                                <div class="col-sm-12">
+                                                    <div class="form-group">
+                                                        <div class="form-line">
+                                                            <textarea rows="14" class="form-control no-resize" placeholder=""></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         <button class="btn btn-primary waves-effect" type="submit">Enviar</button>
 
                                     </div>
