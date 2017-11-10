@@ -18,44 +18,59 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
     <!-- Bootstrap Core Css -->
-
     {!! Html::style('plugins/bootstrap/css/bootstrap.css') !!}
     {!! Html::style('') !!}
 
-    <!-- Waves Effect Css -->
+<!-- Waves Effect Css -->
     {!! Html::style('plugins/node-waves/waves.css') !!}
 
-    <!-- Animation Css -->
+
+<!-- Animation Css -->
     {!! Html::style('plugins/animate-css/animate.css') !!}
 
-    <!-- Morris Chart Css-->
+<!-- Morris Chart Css-->
     {!! Html::style('plugins/morrisjs/morris.css') !!}
 
-    <!-- Custom Css -->
+<!-- Bootstrap Material Datetime Picker Css -->
+    {!! Html::style('plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css') !!}
+
+<!-- Wait Me Css -->
+    {!! Html::style('plugins/waitme/waitMe.css') !!}
+
+<!-- Bootstrap Select Css -->
+    {!! Html::style('plugins/bootstrap-select/css/bootstrap-select.css') !!}
+
+<!-- Custom Css -->
     {!! Html::style('css/style.css') !!}
 
-    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+<!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     {!! Html::style('css/themes/all-themes.css') !!}
+
+<!-- Colorpicker Css -->
+    {!! Html::style('plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.css') !!}
+
+<!-- Dropzone Css -->
+    {!! Html::style('plugins/dropzone/dropzone.css') !!}
+
+<!-- Multi Select Css -->
+    {!! Html::style('plugins/multi-select/css/multi-select.css') !!}
+
+<!-- Bootstrap Spinner Css -->
+    {!! Html::style('plugins/jquery-spinner/css/bootstrap-spinner.css') !!}
+
+<!-- Bootstrap Tagsinput Css -->
+    {!! Html::style('plugins/bootstrap-tagsinput/bootstrap-tagsinput.css') !!}
+
+<!-- noUISlider Css -->
+    {!! Html::style('plugins/nouislider/nouislider.min.css') !!}
+
+<!-- Sweet Alert Css -->
+    {!! Html::style('plugins/sweetalert/sweetalert.css') !!}
+
 
 </head>
 
 <body class="theme-red">
-<!-- Page Loader -->
-<div class="page-loader-wrapper">
-    <div class="loader">
-        <div class="preloader">
-            <div class="spinner-layer pl-red">
-                <div class="circle-clipper left">
-                    <div class="circle"></div>
-                </div>
-                <div class="circle-clipper right">
-                    <div class="circle"></div>
-                </div>
-            </div>
-        </div>
-        <p>Please wait...</p>
-    </div>
-</div>
 <!-- #END# Page Loader -->
 <!-- Overlay For Sidebars -->
 <div class="overlay"></div>
@@ -267,37 +282,92 @@
 </section>
 
 <!-- Jquery Core Js -->
-<script src="../plugins/jquery/jquery.min.js"></script>
+{!! Html::script('plugins/jquery/jquery.min.js') !!}
+{!! Html::script('') !!}
 
 <!-- Bootstrap Core Js -->
-<script src="../plugins/bootstrap/js/bootstrap.js"></script>
+{!! Html::script('plugins/bootstrap/js/bootstrap.js') !!}
 
 <!-- Select Plugin Js -->
-<script src="../plugins/bootstrap-select/js/bootstrap-select.js"></script>
+{!! Html::script('plugins/bootstrap-select/js/bootstrap-select.js') !!}
 
 <!-- Slimscroll Plugin Js -->
-<script src="../plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
-<!-- Jquery Validation Plugin Css -->
-<script src="../../plugins/jquery-validation/jquery.validate.js"></script>
-
-<!-- JQuery Steps Plugin Js -->
-<script src="../../plugins/jquery-steps/jquery.steps.js"></script>
-
-<!-- Sweet Alert Plugin Js -->
-<script src="../../plugins/sweetalert/sweetalert.min.js"></script>
+{!! Html::script('plugins/jquery-slimscroll/jquery.slimscroll.js') !!}
 
 <!-- Waves Effect Plugin Js -->
-<script src="../../plugins/node-waves/waves.js"></script>
+{!! Html::script('plugins/node-waves/waves.js') !!}
+
+<!-- Autosize Plugin Js -->
+{!! Html::script('plugins/autosize/autosize.js') !!}
+
+<!-- Moment Plugin Js -->
+{!! Html::script('plugins/momentjs/moment.js') !!}
+
+<!-- Jquery CountTo Plugin Js -->
+{!! Html::script('plugins/jquery-countto/jquery.countTo.js') !!}
+
+<!-- Morris Plugin Js -->
+{!! Html::script('plugins/raphael/raphael.min.js') !!}
+{!! Html::script('plugins/morrisjs/morris.js') !!}
+
+<!-- ChartJs -->
+{!! Html::script('plugins/chartjs/Chart.bundle.js') !!}
+
+<!-- Flot Charts Plugin Js -->
+{!! Html::script('plugins/flot-charts/jquery.flot.js') !!}
+{!! Html::script('plugins/flot-charts/jquery.flot.resize.js') !!}
+{!! Html::script('plugins/flot-charts/jquery.flot.pie.js') !!}
+{!! Html::script('plugins/flot-charts/jquery.flot.categories.js') !!}
+{!! Html::script('plugins/flot-charts/jquery.flot.time.js') !!}
+
+<!-- Jquery Validation Plugin Css -->
+{!! Html::script('plugins/jquery-validation/jquery.validate.js') !!}
+
+<!-- JQuery Steps Plugin Js -->
+{!! Html::script('plugins/jquery-steps/jquery.steps.js') !!}
+
+<!-- Sweet Alert Plugin Js -->
+{!! Html::script('plugins/sweetalert/sweetalert.min.js') !!}
+
+!-- Bootstrap Colorpicker Js -->
+{!! Html::script('plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js') !!}
+
+<!-- Dropzone Plugin Js -->
+{!! Html::script('plugins/dropzone/dropzone.js') !!}
+
+<!-- Input Mask Plugin Js -->
+{!! Html::script('plugins/jquery-inputmask/jquery.inputmask.bundle.js') !!}
+
+<!-- Multi Select Plugin Js -->
+{!! Html::script('plugins/multi-select/js/jquery.multi-select.js') !!}
+
+<!-- Jquery Spinner Plugin Js -->
+{!! Html::script('plugins/jquery-spinner/js/jquery.spinner.js') !!}
+
+<!-- Bootstrap Tags Input Plugin Js -->
+{!! Html::script('plugins/bootstrap-tagsinput/bootstrap-tagsinput.js') !!}
+
+<!-- noUISlider Plugin Js -->
+{!! Html::script('plugins/nouislider/nouislider.js') !!}
+
+<!-- Waves Effect Plugin Js -->
+{!! Html::script('plugins/node-waves/waves.js') !!}
+
+<!-- Sparkline Chart Plugin Js -->
+{!! Html::script('plugins/jquery-sparkline/jquery.sparkline.js') !!}
+
+
+<!-- Bootstrap Material Datetime Picker Plugin Js -->
+{!! Html::script('plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js') !!}
 
 <!-- Custom Js -->
-<script src="../../js/admin.js"></script>
-<script src="../../js/pages/forms/form-validation.js"></script>
-
-<script src="../../js/pages/forms/form-wizard.js"></script>
+{!! Html::script('js/admin.js') !!}
+{!! Html::script('js/pages/index.js') !!}
+{!! Html::script('js/pages/forms/basic-form-elements.js') !!}
+{!! Html::script('js/pages/forms/advanced-form-elements.js') !!}
 
 <!-- Demo Js -->
-<script src="../../js/demo.js"></script>
-
+{!! Html::script('js/demo.js') !!}
 </body>
 
 </html>
