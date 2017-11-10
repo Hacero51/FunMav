@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Usuario;
 use Illuminate\Http\Request;
-use App\User;
+
+
 class UsuarioController extends Controller
 {
     /**
@@ -13,7 +14,8 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        //
+        $usuario =Usuario::all();
+        return view('admin.usuarios.listar-usuario',compact('usuario'));
     }
 
     /**
@@ -23,7 +25,7 @@ class UsuarioController extends Controller
      */
     public function create()
     {
-
+        //
     }
 
     /**
@@ -35,9 +37,8 @@ class UsuarioController extends Controller
     public function store(Request $request)
     {
         //array(dd($request->toArray()));
+        Usuario::create($request->all());
 
-        User::create($request->all());
-        return redirect('/usuario')->with('message','Usuario Registrado Exitosamente');
     }
 
     /**
@@ -57,9 +58,12 @@ class UsuarioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit( Request $request, $id)
     {
-        return view('usuario.edit',['user'=>$this->user]);
+        $usuario=Usuario::find($id);
+
+        return view('admin.usuarios.editar-usuario',compact('usuario'));
+
     }
 
     /**
@@ -71,7 +75,9 @@ class UsuarioController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $usuario=Usuario::find($id);
+        $usuario->fill($request->all());
+        $usuario->save();
     }
 
     /**

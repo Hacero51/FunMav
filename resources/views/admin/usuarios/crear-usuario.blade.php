@@ -19,8 +19,9 @@
                     <h1>Registro Usuario</h1>
                 </div>
                 <div class="body">
-                    {!!Form::open(['route'=>'usuario.store','method'=>'POST'])!!}
+                    <form id="form_validation" method="POST" action="{{url('usuario')}}">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
                         <div class="row clearfix">
                                 <div class="col-md-6">
                                     <div class="input-group">
@@ -39,19 +40,14 @@
                         </div>
                         <div class="row clearfix">
                             <div class="col-md-6">
-                                <label class="form-label">Tipo de Docuento</label>
-                                <div class="form-line">
-                                    <input type="radio" name="tipo_documento" id="CE" class="with-gap" value="CE">
-                                    <label for="CE">C.E.</label>
-
-                                    <input type="radio" name="tipo_documento" id="CC" class="with-gap" value="CC">
-                                    <label for="CC">C.C.</label>
-
-                                    <input type="radio" name="tipo_documento" id="TI" class="with-gap" value="TI">
-                                    <label for="TI" class="m-l-20">T.I.</label>
-
-                                    <input type="radio" name="tipo_documento" id="RC" class="with-gap" value="RC">
-                                    <label for="RC" class="m-l-20">R.C.</label>
+                                <div class="input-group">
+                                    <select class="form-control" name="tipo_documento" required>
+                                        <option>-- Seleccione tipo de documento --</option>
+                                        <option name="CC">CC</option>
+                                        <option name="TI">TI</option>
+                                        <option name="CE">CE</option>
+                                        <option name="RC">RC</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -104,20 +100,19 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="input-group">
-                                    <p>
-                                        <b>Tipo de Usuario</b>
-                                    </p>
-                                    <select class="form-control" name="perfil">
-                                        <option name="admin">ADMIN</option>
-                                        <option name="administrador">Administradora</option>
-                                        <option name="psicologo">Psicologa</option>
-                                        <option name="trabajadora">Trabajadora</option>
+                                    <select class="form-control" name="perfil" required>
+                                        <option>-- Seleccione perfil --</option>
+                                        <option name="admin">Administrador</option>
+                                        <option name="psico">Psicologo</option>
+                                        <option name="tbs">Trabajador Social</option>
+                                        <option name="emple">Empleado</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
-                        {!!Form::submit('Registrar',['class'=>'btn btn-primary waves-effect'])!!}
-                    {!! Form::close()!!}
+
+                        <button class="btn btn-primary waves-effect" type="submit">CREAR</button>
+                    </form>
                 </div>
             </div>
         </div>

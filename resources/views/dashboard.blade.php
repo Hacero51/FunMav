@@ -9,54 +9,56 @@
     <!-- Favicon-->
 
 
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{asset("favicon.ico")}}" type="image/x-icon">
 
     <!-- Google Fonts -->
     {!! Html::style('') !!}
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="{{asset("https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" )}}" rel="stylesheet" type="text/css">
     {!! Html::style('') !!}
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
-
+    <link href="{{asset("https://fonts.googleapis.com/icon?family=Material+Icons")}}" rel="stylesheet" type="text/css">
     <!-- Bootstrap Core Css -->
-
-    {!! Html::style('plugins/bootstrap/css/bootstrap.css') !!}
-    {!! Html::style('') !!}
+    <link href="{{asset("../../plugins/bootstrap/css/bootstrap.css" )}}" rel="stylesheet">
 
     <!-- Waves Effect Css -->
-    {!! Html::style('plugins/node-waves/waves.css') !!}
+    <link href="{{asset("../../plugins/node-waves/waves.css")}}" rel="stylesheet" />
 
     <!-- Animation Css -->
-    {!! Html::style('plugins/animate-css/animate.css') !!}
+    <link href="{{asset("../../plugins/animate-css/animate.css")}}" rel="stylesheet" />
 
-    <!-- Morris Chart Css-->
-    {!! Html::style('plugins/morrisjs/morris.css') !!}
+
+
+    <!-- Colorpicker Css -->
+    <link href="{{asset("../../plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.css")}}" rel="stylesheet" />
+
+    <!-- Dropzone Css -->
+    <link href="{{asset("../../plugins/dropzone/dropzone.css")}}" rel="stylesheet">
+
+    <!-- Multi Select Css -->
+    <link href="{{asset("../../plugins/multi-select/css/multi-select.css")}}" rel="stylesheet">
+
+    <!-- Bootstrap Spinner Css -->
+    <link href="{{asset("../../plugins/jquery-spinner/css/bootstrap-spinner.css")}}" rel="stylesheet">
+
+    <!-- Bootstrap Tagsinput Css -->
+    <link href="{{asset("../../plugins/bootstrap-tagsinput/bootstrap-tagsinput.css")}}" rel="stylesheet">
+
+    <!-- Bootstrap Select Css -->
+    <link href="{{asset("../../plugins/bootstrap-select/css/bootstrap-select.css")}}" rel="stylesheet" />
+
+    <!-- noUISlider Css -->
+    <link href="{{asset("../../plugins/nouislider/nouislider.min.css")}}" rel="stylesheet" />
 
     <!-- Custom Css -->
-    {!! Html::style('css/style.css') !!}
+    <link href="{{asset("../../css/style.css")}}" rel="stylesheet">
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
-    {!! Html::style('css/themes/all-themes.css') !!}
+    <link href="{{asset("../../css/themes/all-themes.css")}}" rel="stylesheet" />
+
 
 </head>
 
 <body class="theme-red">
-<!-- Page Loader -->
-<div class="page-loader-wrapper">
-    <div class="loader">
-        <div class="preloader">
-            <div class="spinner-layer pl-red">
-                <div class="circle-clipper left">
-                    <div class="circle"></div>
-                </div>
-                <div class="circle-clipper right">
-                    <div class="circle"></div>
-                </div>
-            </div>
-        </div>
-        <p>Please wait...</p>
-    </div>
-</div>
-<!-- #END# Page Loader -->
+
 <!-- Overlay For Sidebars -->
 <div class="overlay"></div>
 <!-- #END# Overlay For Sidebars -->
@@ -81,7 +83,7 @@
         <!-- User Info -->
         <div class="user-info">
             <div class="image">
-                <img src="images/user.png" width="48" height="48" alt="User" />
+                <img src="{{asset("/images/user.png")}}" width="48" height="48" alt="User" />
             </div>
             <div class="info-container">
                 <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John Doe</div>
@@ -267,36 +269,50 @@
 </section>
 
 <!-- Jquery Core Js -->
-<script src="../plugins/jquery/jquery.min.js"></script>
+<script src="{{asset("../plugins/jquery/jquery.min.js")}}"></script>
 
 <!-- Bootstrap Core Js -->
-<script src="../plugins/bootstrap/js/bootstrap.js"></script>
+<script src="{{asset("../plugins/bootstrap/js/bootstrap.js")}}"></script>
 
 <!-- Select Plugin Js -->
-<script src="../plugins/bootstrap-select/js/bootstrap-select.js"></script>
+<script src="{{asset("../plugins/bootstrap-select/js/bootstrap-select.js")}}"></script>
 
 <!-- Slimscroll Plugin Js -->
-<script src="../plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+<script src="{{asset("../plugins/jquery-slimscroll/jquery.slimscroll.js")}}"></script>
 <!-- Jquery Validation Plugin Css -->
-<script src="../../plugins/jquery-validation/jquery.validate.js"></script>
+<script src="{{asset("../../plugins/jquery-validation/jquery.validate.js")}}"></script>
 
 <!-- JQuery Steps Plugin Js -->
-<script src="../../plugins/jquery-steps/jquery.steps.js"></script>
+<script src="{{asset("../../plugins/jquery-steps/jquery.steps.js")}}"></script>
 
 <!-- Sweet Alert Plugin Js -->
-<script src="../../plugins/sweetalert/sweetalert.min.js"></script>
+<script src="{{asset("../../plugins/sweetalert/sweetalert.min.js")}}"></script>
 
 <!-- Waves Effect Plugin Js -->
-<script src="../../plugins/node-waves/waves.js"></script>
+<script src="{{asset("../../plugins/node-waves/waves.js")}}"></script>
+
+<!-- Jquery DataTable Plugin Js -->
+<script src="{{asset("../../plugins/jquery-datatable/jquery.dataTables.js")}}"></script>
+<script src="{{asset("../../plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js")}}"></script>
+<script src="{{asset("../../plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js")}}"></script>
+<script src="{{asset("../../plugins/jquery-datatable/extensions/export/buttons.flash.min.js")}}"></script>
+<script src="{{asset("../../plugins/jquery-datatable/extensions/export/jszip.min.js")}}"></script>
+<script src="{{asset("../../plugins/jquery-datatable/extensions/export/pdfmake.min.js")}}"></script>
+<script src="{{asset("../../plugins/jquery-datatable/extensions/export/vfs_fonts.js")}}"></script>
+<script src="{{asset("../../plugins/jquery-datatable/extensions/export/buttons.html5.min.js")}}"></script>
+<script src="{{asset("../../plugins/jquery-datatable/extensions/export/buttons.print.min.js")}}"></script>
 
 <!-- Custom Js -->
-<script src="../../js/admin.js"></script>
-<script src="../../js/pages/forms/form-validation.js"></script>
+<script src="{{asset("../../js/admin.js")}}"></script>
 
-<script src="../../js/pages/forms/form-wizard.js"></script>
+<script src="{{asset("../../js/pages/tables/jquery-datatable.js")}}"></script>
+
+<script src="{{asset("../../js/pages/forms/form-validation.js")}}"></script>
+
+<script src="{{asset("../../js/pages/forms/form-wizard.js")}}"></script>
 
 <!-- Demo Js -->
-<script src="../../js/demo.js"></script>
+<script src="{{asset("../../js/demo.js")}}"></script>
 
 </body>
 

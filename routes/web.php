@@ -41,27 +41,12 @@ Route::get('/hingreso', function () {
 Route::get('/eingreso', function () {
     return view('/eingreso');
 });
-Route::get('/crear-usuario', function () {
-    return view('/crear-usuario');
-});
-Route::get('/listar-usuario', function () {
-    return view('/listar-usuario');
-});
-
 
 Route::get('/admin', function () {
     return view('admin.usuarios.crear-usuario');
 });
+
 Route::group([],function(){
     Route::resource('usuario','UsuarioController');
 });
 
-// Registration routes...
-Route::get('register', [
-    'uses'=>'Auth\RegisterController@getRegister',
-    'as'=>'register'
-]);
-Route::post('register', [
-    'uses'=>'Auth\RegisterController@postRegister',
-    'as'=>'register'
-]);
