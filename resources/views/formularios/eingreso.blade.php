@@ -1,6 +1,14 @@
-@extends('index')
-@section('content')
-    <section class="content">
+@extends('dashboard')
+
+@section('topbar')
+    @include('admin.topbar')
+@endsection
+
+@section('menu')
+    @include('admin.menu')
+@endsection
+
+@section('contenido')
         <div class="container-fluid">
             <div class="block-header">
                 <h1>
@@ -20,7 +28,7 @@
                                             <table  class="table table-bordered">
                                                 <thead>
                                                 <tr>
-                                                    <th>FECHA</th>
+                                                    <th>Fecha</th>
                                                     <th>
                                                         <input align="right" type="date" class="form-control date" placeholder="dd/mm/aaaa">
                                                     </th>
@@ -28,19 +36,19 @@
                                                 </thead>
                                                 <tbody>
                                                 <tr>
-                                                    <th>HORA</th>
+                                                    <th>Hora</th>
                                                     <th>
                                                         <input align="right" type="time"  class="form-control date" placeholder="hh/mm">
                                                     </th>
                                                 </tr>
                                                 <tr>
-                                                    <th>EDAD</th>
+                                                    <th>Edad</th>
                                                     <th>
                                                         <input type="text" class="form-control date">
                                                     </th>
                                                 </tr>
                                                 <tr>
-                                                    <th>SEXO</th>
+                                                    <th>Sexo</th>
                                                     <th>
                                                         <select class="form-control">
                                                             <option>seleccion sexo</option>
@@ -50,13 +58,13 @@
                                                     </th>
                                                 </tr>
                                                 <tr>
-                                                    <th>SERVICIO</th>
+                                                    <th>Servicio</th>
                                                     <th>
                                                         <input type="text" class="form-control date">
                                                     </th>
                                                 </tr>
                                                 <tr>
-                                                    <th>LINEA DE PAGO</th>
+                                                    <th>Linea de Pago</th>
                                                     <th>
                                                         <select class="form-control">
                                                             <option>seleccion</option>
@@ -68,13 +76,13 @@
                                                 </tr>
 
                                                 <tr>
-                                                    <th>NOMBRES Y APELLIDOS</th>
+                                                    <th>Nombres y Apellidos</th>
                                                     <th>
                                                         <input type="text" class="form-control" name="names" required>
                                                     </th>
                                                 </tr>
                                                 <tr>
-                                                    <th>DOCUMENTO</th>
+                                                    <th>Documento</th>
                                                     <th>
                                                         <input type="text" class="form-control date">
                                                     </th>
@@ -82,7 +90,7 @@
                                                 </tbody>
                                             </table>
                                         </div>
-                                        <h2 class="card-inside-title">MOTIVO DE CONSULTA O SOLICITUD DE SERVICIO</h2>
+                                        <h2 class="card-inside-title">Motivo de Consulta o Solicitud de Servicio</h2>
                                         <div class="row clearfix">
                                             <div class="col-sm-12">
                                                 <div class="form-group">
@@ -92,12 +100,182 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <h2 class="card-inside-title">EMFERMEDAD ACTUAL</h2>
+                                        <h2 class="card-inside-title">Emfermedad Actual</h2>
                                         <div class="row clearfix">
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <div class="form-line">
                                                         <textarea rows="2" class="form-control no-resize"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h2 class="card-inside-title">Antecedentes</h2>
+                                        <div class="body table-responsive">
+                                            <table  class="table table-bordered">
+                                                <thead>
+                                                <tr>
+                                                    <th>Patologicos</th>
+                                                    <th>
+                                                        <input type="text" class="form-control date">
+                                                    </th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <th>Quirurjicos</th>
+                                                    <th>
+                                                        <input type="text" class="form-control date">
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Toxico Alergicos</th>
+                                                    <th>
+                                                        <input type="text" class="form-control date">
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Farmacologicos</th>
+                                                    <th>
+                                                        <input type="text" class="form-control date">
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Inmunizacion</th>
+                                                    <th>
+                                                        <input type="text" class="form-control date">
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Transfusion</th>
+                                                    <th>
+                                                        <input type="text" class="form-control date">
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Ginecobstetricios</th>
+                                                    <th>
+                                                        <textarea rows="2" class="form-control no-resize"></textarea>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Menarquias</th>
+                                                    <th>
+                                                        <input type="text" class="form-control date">
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Ciclos</th>
+                                                    <th>
+                                                        <input type="text" class="form-control date">
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Regular</th>
+                                                    <th>
+                                                        <select class="form-control">
+                                                            <option>seleccion</option>
+                                                            <option>SI</option>
+                                                            <option>NO</option>
+                                                        </select>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Planificacion ETS</th>
+                                                    <th>
+                                                        <select class="form-control">
+                                                            <option>seleccion</option>
+                                                            <option>G</option>
+                                                            <option>P</option>
+                                                            <option>C</option>
+                                                            <option>A</option>
+                                                            <option>V</option>
+                                                            <option>O</option>
+                                                            <option>E</option>
+                                                            <option>MOLA</option>
+                                                        </select>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Patologia Embarazo Actual</th>
+                                                    <th>
+                                                        <input type="text" class="form-control date">
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Patologia Embarazo Anterior</th>
+                                                    <th>
+                                                        <input type="text" class="form-control date">
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th>OTROS</th>
+                                                    <th>
+                                                        <input type="text" class="form-control date">
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th>FAMILIARES</th>
+                                                    <th>
+                                                        <input type="text" class="form-control date">
+                                                    </th>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <h2 class="card-inside-title">EXAMEN FISICO (HALLAZGO)</h2>
+                                        <div class="body table-responsive">
+                                            <table  class="table table-bordered">
+                                                <thead>
+                                                <tr>
+                                                    <th>
+                                                        <input type="text" class="form-control date" placeholder="T.A." >
+                                                    </th>
+                                                    <th>
+                                                        <input type="text" class="form-control date"  placeholder="F.C." >
+                                                    </th>
+                                                    <th>
+                                                        <input type="text" class="form-control date"  placeholder="F.R." >
+                                                    </th>
+                                                    <th>
+                                                        <input type="text" class="form-control date"  placeholder="TEMP." >
+                                                    </th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <th>
+                                                        <input type="text" class="form-control date"  placeholder="PESO:" >
+                                                    </th>
+                                                    <th>
+                                                        <input type="text" class="form-control date"  placeholder="GLASGLOW" >
+                                                    </th>
+                                                    <th>
+                                                        <input type="text" class="form-control date"  placeholder="TALLA." >
+                                                    </th>
+                                                    <th>
+                                                        <input type="text" class="form-control date"  placeholder="SATO2">
+                                                    </th>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <h2 class="card-inside-title">Conducta.</h2>
+                                        <div class="row clearfix">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <textarea rows="2" class="form-control no-resize" placeholder=""></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h2 class="card-inside-title">EVOLUCION.</h2>
+                                        <div class="row clearfix">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <textarea rows="2" class="form-control no-resize" placeholder=""></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -111,5 +289,4 @@
                 </div>
             </div>
         </div>
-    </section>
-@stop
+@endsection

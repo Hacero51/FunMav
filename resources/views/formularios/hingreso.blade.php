@@ -1,6 +1,14 @@
-@extends('index')
-@section('content')
-    <section class="content">
+@extends('dashboard')
+
+@section('topbar')
+    @include('admin.topbar')
+@endsection
+
+@section('menu')
+    @include('admin.menu')
+@endsection
+
+@section('contenido')
         <div class="container-fluid">
             <div class="block-header">
                 <h1>
@@ -38,7 +46,7 @@
                                                 <tr>
                                                     <th>IDENTIFICACION</th>
                                                     <th>
-                                                        <input type="text" class="form-control date"
+                                                        <input type="text" class="form-control date">
                                                     </th>
                                                 </tr>
                                                 <tr>
@@ -155,5 +163,4 @@
                 </div>
             </div>
         </div>
-    </section>
-@stop
+@endsection
