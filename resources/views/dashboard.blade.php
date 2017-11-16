@@ -12,9 +12,7 @@
     <link rel="icon" href="{{asset("favicon.ico")}}" type="image/x-icon">
 
     <!-- Google Fonts -->
-    {!! Html::style('') !!}
     <link href="{{asset("https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" )}}" rel="stylesheet" type="text/css">
-    {!! Html::style('') !!}
     <link href="{{asset("https://fonts.googleapis.com/icon?family=Material+Icons")}}" rel="stylesheet" type="text/css">
     <!-- Bootstrap Core Css -->
     <link href="{{asset("../../plugins/bootstrap/css/bootstrap.css" )}}" rel="stylesheet">
@@ -25,7 +23,8 @@
     <!-- Animation Css -->
     <link href="{{asset("../../plugins/animate-css/animate.css")}}" rel="stylesheet" />
 
-
+    <!-- Sweetalert Css -->
+    <link href="{{asset("../../plugins/sweetalert/sweetalert.css")}}" rel="stylesheet" />
 
     <!-- Colorpicker Css -->
     <link href="{{asset("../../plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.css")}}" rel="stylesheet" />
@@ -91,13 +90,9 @@
                 <div class="btn-group user-helper-dropdown">
                     <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                     <ul class="dropdown-menu pull-right">
-                        <li><a href="javascript:void(0);"><i class="material-icons">person</i>Profile</a></li>
+                        <li><a href="javascript:void(0);"><i class="material-icons">person</i>Perfil</a></li>
                         <li role="seperator" class="divider"></li>
-                        <li><a href="javascript:void(0);"><i class="material-icons">group</i>Followers</a></li>
-                        <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
-                        <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li>
-                        <li role="seperator" class="divider"></li>
-                        <li><a href="javascript:void(0);"><i class="material-icons">input</i>Sign Out</a></li>
+                            <li><a href="javascript:void(0);"><i class="material-icons">input</i>Cerrar Secion</a></li>
                     </ul>
                 </div>
             </div>
@@ -109,10 +104,10 @@
         <!-- Footer -->
         <div class="legal">
             <div class="copyright">
-                &copy; 2016 - 2017 <a href="javascript:void(0);">AdminBSB - Material Design</a>.
+                &copy; 2017 - 2018 <a href="javascript:void(0);">Fundación Manantíal de Vida</a>.
             </div>
             <div class="version">
-                <b>Version: </b> 1.0.5
+                <b>Version: </b> 1.0.0
             </div>
         </div>
         <!-- #Footer -->
@@ -269,16 +264,26 @@
 </section>
 
 <!-- Jquery Core Js -->
-<script src="{{asset("../plugins/jquery/jquery.min.js")}}"></script>
+<script src="{{asset("../../plugins/jquery/jquery.min.js")}}"></script>
 
 <!-- Bootstrap Core Js -->
-<script src="{{asset("../plugins/bootstrap/js/bootstrap.js")}}"></script>
+<script src="{{asset("../../plugins/bootstrap/js/bootstrap.js")}}"></script>
 
 <!-- Select Plugin Js -->
-<script src="{{asset("../plugins/bootstrap-select/js/bootstrap-select.js")}}"></script>
+<script src="{{asset("../../plugins/bootstrap-select/js/bootstrap-select.js")}}"></script>
 
 <!-- Slimscroll Plugin Js -->
-<script src="{{asset("../plugins/jquery-slimscroll/jquery.slimscroll.js")}}"></script>
+<script src="{{asset("../../plugins/jquery-slimscroll/jquery.slimscroll.js")}}"></script>
+
+<!-- Bootstrap Notify Plugin Js -->
+<script src="{{asset("../../plugins/bootstrap-notify/bootstrap-notify.js")}}"></script>
+
+<!-- Waves Effect Plugin Js -->
+<script src="{{asset("../../plugins/node-waves/waves.js")}}"></script>
+
+<!-- SweetAlert Plugin Js -->
+<script src="{{asset("../../plugins/sweetalert/sweetalert.min.js")}}"></script>
+
 <!-- Jquery Validation Plugin Css -->
 <script src="{{asset("../../plugins/jquery-validation/jquery.validate.js")}}"></script>
 
@@ -304,6 +309,8 @@
 
 <!-- Custom Js -->
 <script src="{{asset("../../js/admin.js")}}"></script>
+
+<script src="{{asset("../../js/pages/ui/notifications.js")}}"></script>
 
 <script src="{{asset("../../js/pages/tables/jquery-datatable.js")}}"></script>
 

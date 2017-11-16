@@ -11,15 +11,18 @@
 @section('contenido')
     <!-- Advanced Form Example With Validation -->
     <div class="container-fluid">
-        <!-- Basic Validation -->
+        <!-- Basic Examples -->
         <div class="row clearfix">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
                     <div class="header">
-                        <h1>Actualizar Usuario</h1>
+                        <h2>
+                            VER USUARIOS
+                        </h2>
                     </div>
                     <div class="body">
-                        <form id="form_validation" method="PUT" action="{{url('usuario/{usuario}')}}">
+                        {!! Form::open(['route' => ['usuario.update',$usuario], 'method' => 'PUT']) !!}
+
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                             <div class="row clearfix">
@@ -113,8 +116,10 @@
                                 </div>
                             </div>
 
-                            <button class="btn btn-primary waves-effect" type="submit">ACTUALIZAR</button>
-                        </form>
+                            {!! Form::submit('Actualizar', ['class' =>'btn btn-primary']) !!}
+
+
+                        {!! Form::close() !!}
                     </div>
                 </div>
             </div>

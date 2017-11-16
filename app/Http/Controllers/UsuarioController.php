@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Usuario;
 use Illuminate\Http\Request;
+use Session;
+
 
 
 class UsuarioController extends Controller
@@ -25,7 +27,7 @@ class UsuarioController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.usuarios.crear-usuario');
     }
 
     /**
@@ -38,6 +40,9 @@ class UsuarioController extends Controller
     {
         //array(dd($request->toArray()));
         Usuario::create($request->all());
+
+        Session::flash('message','El registro fue creado exitosamente.');
+        return redirect('usuario');
 
     }
 
@@ -75,9 +80,14 @@ class UsuarioController extends Controller
      */
     public function update(Request $request, $id)
     {
+
         $usuario=Usuario::find($id);
+        //dd($usuario);
         $usuario->fill($request->all());
         $usuario->save();
+        Session::flash('message','El usuario: '.$usuario->nombres .' '.$usuario->apellidos.' fue actualizado exitosamente');
+        return redirect('usuario');
+
     }
 
     /**

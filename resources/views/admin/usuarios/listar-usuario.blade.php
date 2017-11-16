@@ -16,22 +16,18 @@
                 <div class="card">
                     <div class="header">
                         <h2>
-                            BASIC EXAMPLE
+                            VER USUARIOS
                         </h2>
-                        <ul class="header-dropdown m-r--5">
-                            <li class="dropdown">
-                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                    <i class="material-icons">more_vert</i>
-                                </a>
-                                <ul class="dropdown-menu pull-right">
-                                    <li><a href="javascript:void(0);">Action</a></li>
-                                    <li><a href="javascript:void(0);">Another action</a></li>
-                                    <li><a href="javascript:void(0);">Something else here</a></li>
-                                </ul>
-                            </li>
-                        </ul>
                     </div>
+
                     <div class="body">
+                        @if(Session::has('message'))
+                            <div class="alert bg-green alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                {{Session::get('message')}}
+                            </div>
+                        @endif
+
                         <div class="table-responsive">
                             <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                                 <thead>
@@ -89,6 +85,8 @@
             </div>
         </div>
         <!-- #END# Basic Examples -->
+
+
     </div>
 @endsection
 

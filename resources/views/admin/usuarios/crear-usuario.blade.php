@@ -11,15 +11,17 @@
 @section('contenido')
 <!-- Advanced Form Example With Validation -->
 <div class="container-fluid">
-    <!-- Basic Validation -->
+    <!-- Basic Examples -->
     <div class="row clearfix">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="header">
-                    <h1>Registro Usuario</h1>
+                    <h2>
+                        VER USUARIOS
+                    </h2>
                 </div>
                 <div class="body">
-                    <form id="form_validation" method="POST" action="{{url('usuario')}}">
+                    <form id="form_validation" method="POST" action="{{url("usuario")}}">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                         <div class="row clearfix">
