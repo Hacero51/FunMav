@@ -73,7 +73,7 @@
 </div>
 <!-- #END# Search Bar -->
 <!-- Top Bar -->
-    @yield('topbar')
+@yield('topbar')
 <!-- #Top Bar -->
 <section>
 

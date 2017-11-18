@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use Session;
 
 
-
 class UsuarioController extends Controller
 {
     /**
@@ -38,7 +37,7 @@ class UsuarioController extends Controller
      */
     public function store(Request $request)
     {
-        //array(dd($request->toArray()));
+
         Usuario::create($request->all());
 
         Session::flash('message','El registro fue creado exitosamente.');
