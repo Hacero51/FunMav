@@ -1,3 +1,4 @@
+
 @extends('dashboard')
 
 @section('topbar')
@@ -61,21 +62,21 @@
                                 </tfoot>
                                 <tbody>
                                 @foreach($usuario as $usuario)
-                                <tr>
-                                    <td>{{$usuario->nombres}}</td>
-                                    <td>{{$usuario->apellidos}}</td>
-                                    <td>{{$usuario->tipo_documento}}</td>
-                                    <td>{{$usuario->documento}}</td>
-                                    <td>{{$usuario->dirrecion}}</td>
-                                    <td>{{$usuario->telefono}}</td>
-                                    <td>{{$usuario->email}}</td>
-                                    <td>{{$usuario->usuario}}</td>
-                                    <td>{{$usuario->perfil}}</td>
-                                    <td>
-                                        <a class="btn-circle" href="{{route('usuario.edit',$usuario->id)}}" role="button"><i class="material-icons">create</i></a>
-                                    </td>
+                                    <tr>
+                                        <td>{{$usuario->nombres}}</td>
+                                        <td>{{$usuario->apellidos}}</td>
+                                        <td>{{$usuario->tipo_documento}}</td>
+                                        <td>{{$usuario->documento}}</td>
+                                        <td>{{$usuario->dirrecion}}</td>
+                                        <td>{{$usuario->telefono}}</td>
+                                        <td>{{$usuario->email}}</td>
+                                        <td>{{$usuario->usuario}}</td>
+                                        <td>{{$usuario->perfil}}</td>
+                                        <td>
+                                            <a class="btn-circle" href="{{route('usuario.edit',$usuario->id)}}" role="button"><i class="material-icons">create</i></a>
+                                        </td>
 
-                                </tr>
+                                    </tr>
                                 @endforeach
                                 </tbody>
                             </table>
@@ -89,5 +90,3 @@
 
     </div>
 @endsection
-
-
