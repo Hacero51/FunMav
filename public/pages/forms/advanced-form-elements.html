@@ -22,8 +22,6 @@
     <!-- Animation Css -->
     <link href="../../plugins/animate-css/animate.css" rel="stylesheet" />
 
-
-
     <!-- Colorpicker Css -->
     <link href="../../plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.css" rel="stylesheet" />
 
@@ -1656,23 +1654,3 @@
 
 </html>
 
-<form id="form_validation" method="PUT" action="{{url('usuario/{usuario}')}}">
-    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-
-
-    <div class="row clearfix">
-        <div class="col-md-6">
-            <div class="input-group">
-                <div class="form-line">
-                    <input type="text" class="form-control" name="nombres" id="nombres" value="{{$usuario->nombres}}" placeholder="Nombres" required>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="input-group">
-                <div class="form-line">
-                    <input type="text" class="form-control" name="apellidos" id="apellidos" value="{{$usuario->apellidos}}" placeholder="Apellidos" required>
-                </div>
-            </div>
-        </div>
-    </div>

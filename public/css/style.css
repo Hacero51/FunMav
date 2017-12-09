@@ -6070,7 +6070,7 @@ fieldset[disabled] .form-control {
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   border-radius: 0; }
-  .wizard > .actions a:hover, .wizard > .actions a:active {
+  .wizard > .actions a:hover> .actions a:active {
     background: #009688;
     color: #fff;
     display: block;

@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Paciente;
+use App\Ubicacion;
+use App\Centro_rehabilitacion;
+use Session;
+
 
 class HvController extends Controller
 {
@@ -13,7 +18,7 @@ class HvController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -34,7 +39,12 @@ class HvController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Paciente::create($request->all());
+        Ubicacion::create($request->all());
+        Centro_rehabilitacion::create($request->all());
+
+        Session::flash('message','Se registro exitosamente.');
+        return redirect('usuario');
     }
 
     /**

@@ -11,6 +11,20 @@ class Paciente extends Model
     public $timestamps = false;
 
     protected  $fillable = [
-
+        'nombres',
+        'apellidos',
+        'documento',
+        'tipo_documento',
+        'procedencia',
+        'fecha_nacimiento',
+        'edad',
+        'estado_civil',
+        'hijos',
+        'alias',
+        'estudio',
+        'genero',
+        'rh',
+        'senales',
+        'foto'
     ];
 }

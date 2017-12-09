@@ -17,7 +17,7 @@
             <div class="card">
                 <div class="header">
                     <h2>
-                        VER USUARIOS
+                        CREAR USUARIOS
                     </h2>
                 </div>
                 <div class="body">

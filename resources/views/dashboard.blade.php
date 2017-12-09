@@ -23,6 +23,7 @@
     <!-- Animation Css -->
     <link href="{{asset("../../plugins/animate-css/animate.css")}}" rel="stylesheet" />
 
+
     <!-- Sweetalert Css -->
     <link href="{{asset("../../plugins/sweetalert/sweetalert.css")}}" rel="stylesheet" />
 
@@ -275,8 +276,29 @@
 <!-- Slimscroll Plugin Js -->
 <script src="{{asset("../../plugins/jquery-slimscroll/jquery.slimscroll.js")}}"></script>
 
+<!-- Bootstrap Colorpicker Js -->
+<script src="{{asset("../../plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js")}}"></script>
+
+<!-- Dropzone Plugin Js -->
+<script src="{{asset("../../plugins/dropzone/dropzone.js")}}"></script>
+
 <!-- Bootstrap Notify Plugin Js -->
 <script src="{{asset("../../plugins/bootstrap-notify/bootstrap-notify.js")}}"></script>
+
+<!-- Input Mask Plugin Js -->
+<script src="{{asset("../../plugins/jquery-inputmask/jquery.inputmask.bundle.js")}}"></script>
+
+<!-- Multi Select Plugin Js -->
+<script src="{{asset("../../plugins/multi-select/js/jquery.multi-select.js")}}"></script>
+
+<!-- Jquery Spinner Plugin Js -->
+<script src="{{asset("../../plugins/jquery-spinner/js/jquery.spinner.js")}}"></script>
+
+<!-- Bootstrap Tags Input Plugin Js -->
+<script src="{{asset("../../plugins/bootstrap-tagsinput/bootstrap-tagsinput.js")}}"></script>
+
+<!-- noUISlider Plugin Js -->
+<script src="{{asset("../../plugins/nouislider/nouislider.js")}}"></script>
 
 <!-- Waves Effect Plugin Js -->
 <script src="{{asset("../../plugins/node-waves/waves.js")}}"></script>
@@ -317,6 +339,8 @@
 <script src="{{asset("../../js/pages/forms/form-validation.js")}}"></script>
 
 <script src="{{asset("../../js/pages/forms/form-wizard.js")}}"></script>
+
+<script src="{{asset("../../js/pages/forms/advanced-form-elements.js")}}"></script>
 
 <!-- Demo Js -->
 <script src="{{asset("../../js/demo.js")}}"></script>

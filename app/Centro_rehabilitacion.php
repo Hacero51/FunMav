@@ -11,6 +11,6 @@ class Centro_rehabilitacion extends Model
     public $timestamps = false;
 
     protected  $fillable = [
-
+        'nombre_centro'
     ];
 }

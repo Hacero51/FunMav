@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('admin.inicio');
 });
 Route::get('/hv', function () {
-    return view('/hv');
+    return view('formularios/hv');
 });
 Route::get('/acudiente', function () {
     return view('/acudiente');
