@@ -18,28 +18,41 @@ Route::get('/hv', function () {
     return view('formularios/hv');
 });
 Route::get('/acudiente', function () {
-    return view('/acudiente');
+    return view('formularios/acudiente');
 });
 Route::get('/diario', function () {
-    return view('/diario');
+    return view('formularios/diario');
 });
 Route::get('/hc', function () {
-    return view('/hc');
+    return view('formularios/hc');
 });
 Route::get('/sproceso', function () {
-    return view('/sproceso');
+    return view('formularios/sproceso');
 });
 Route::get('/cproceso', function () {
-    return view('/cproceso');
+    return view('formularios/cproceso');
 });
 Route::get('/rpsicologica', function () {
-    return view('/rpsicologica');
+    return view('formularios/rpsicologica');
 });
 Route::get('/hingreso', function () {
-    return view('/hingreso');
+    return view('formularios/hingreso');
 });
 Route::get('/eingreso', function () {
-    return view('/eingreso');
+    return view('formularios/eingreso');
+});
+
+Route::get('/eegreso', function () {
+    return view('formularios/eegreso');
+});
+
+
+Route::get('/encuesta', function () {
+    return view('/encuestaeto');
+});
+
+Route::get('/eto', function () {
+    return view('/tocupacional');
 });
 
 Route::get('/admin', function () {

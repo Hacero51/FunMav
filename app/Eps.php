@@ -11,6 +11,6 @@ class Eps extends Model
     public $timestamps = false;
 
     protected  $fillable = [
-
+        'nombre'
     ];
 }

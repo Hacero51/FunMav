@@ -11,6 +11,13 @@ class Diario_terapeutico extends Model
     public $timestamps = false;
 
     protected  $fillable = [
-
+        'fecha',
+        'titulo_dia',
+        'cronica',
+        'estado_inicial',
+        'estado_final',
+        'experiencias_negativas',
+        'experiencias_positivas',
+        'compromiso'
     ];
 }

@@ -20,15 +20,23 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="body">
-                            <form>
+                            <form id="form_validation" method="POST" action="{{url("")}}">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <div id="form_validation">
                                     <div class="input-group-lg">
                                         <div class="row clearfix">
                                             <br>
-                                            <div class="col-md-8">
+                                            <div class="col-md-4">
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" placeholder="Nombres y apellidos">
+                                                        <input type="text" class="form-control date" name="nombres"  placeholder="Nombres">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-group">
+                                                    <div class="form-line">
+                                                        <input type="text" class="form-control date" name="apellidos" placeholder="Apellidos">
                                                     </div>
                                                 </div>
                                             </div>
@@ -39,7 +47,7 @@
                                                         <i class="material-icons">date_range</i>
                                                     </span>
                                                     <div class="form-line">
-                                                        <input type="date" class="form-control date" placeholder="dd/mm/aaaa">
+                                                        <input type="date" class="form-control date" name="fecha" placeholder="dd/mm/aaaa">
                                                     </div>
                                                 </div>
                                             </div>
@@ -48,7 +56,7 @@
                                             <div class="col-md-12">
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" placeholder="TItulo del Dia">
+                                                        <input type="text" class="form-control date" name="titulo_dia" placeholder="TItulo del Dia">
                                                     </div>
                                                 </div>
                                             </div>
@@ -57,7 +65,7 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <textarea rows="5" class="form-control no-resize" placeholder="Cronica : ......"></textarea>
+                                                        <textarea rows="5" class="form-control no-resize" name="cronica" placeholder="Cronica : ......"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -66,7 +74,7 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <textarea rows="3" class="form-control no-resize" placeholder="Estado de Animo Inicial: ......"></textarea>
+                                                        <textarea rows="3" class="form-control no-resize" name="estado_inicial" placeholder="Estado de Animo Inicial: ......"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -75,7 +83,7 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <textarea rows="3" class="form-control no-resize" placeholder="Estado de Animo Final: ......"></textarea>
+                                                        <textarea rows="3" class="form-control no-resize" name="estado_final" placeholder="Estado de Animo Final: ......"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -86,14 +94,14 @@
                                             <div class="col-sm-6">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <textarea rows="3" class="form-control no-resize" placeholder="1......."></textarea>
+                                                        <textarea rows="3" class="form-control no-resize" name="experiencias_positivas"  placeholder="1......."></textarea>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <textarea rows="3" class="form-control no-resize" placeholder="2......."></textarea>
+                                                        <textarea rows="3" class="form-control no-resize" name="experiencias_positivas"  placeholder="2......."></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -103,14 +111,14 @@
                                             <div class="col-sm-6">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <textarea rows="3" class="form-control no-resize" placeholder="1......."></textarea>
+                                                        <textarea rows="3" class="form-control no-resize" name="experiencias_negativas"  placeholder="1......."></textarea>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <textarea rows="3" class="form-control no-resize" placeholder="2......."></textarea>
+                                                        <textarea rows="3" class="form-control no-resize" name="experiencias_negativas" placeholder="2......."></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -119,7 +127,7 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <textarea rows="4" class="form-control no-resize" placeholder="Que compromiso hago para cambiar mi forma de actuar"></textarea>
+                                                        <textarea rows="4" class="form-control no-resize" name="compromiso" placeholder="Que compromiso hago para cambiar mi forma de actuar"></textarea>
                                                     </div>
                                                 </div>
                                             </div>

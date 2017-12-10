@@ -11,7 +11,15 @@ class Acudiente extends Model
     public $timestamps = false;
 
     protected  $fillable = [
-
+        'documento',
+        'tipo_documento',
+        'nombres',
+        'apellidos',
+        'dirrecion',
+        'telefono',
+        'profesion',
+        'empresa_labora',
+        'parentesco'
     ];
 }
 

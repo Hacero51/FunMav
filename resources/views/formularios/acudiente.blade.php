@@ -20,13 +20,24 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="body">
-                            <form>
+                            <form id="form_validation" method="POST" action="{{url("")}}">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <div id="form_validation">
                                     <br>
-                                    <div class="form-group form-float" >
-                                        <div class="form-line">
-                                            <input type="text" class="form-control" name="names" required>
-                                            <label class="form-label">Nombres y Apellidos</label>
+                                    <div class="row clearfix">
+                                        <div class="col-md-5">
+                                            <div class="input-group">
+                                                <div class="form-line">
+                                                    <input type="text" class="form-control date" name="nombres"  placeholder="Nombres">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="input-group">
+                                                <div class="form-line">
+                                                    <input type="text" class="form-control date" name="apellidos" placeholder="Apellidos">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="input-group-lg">
@@ -35,23 +46,25 @@
                                                 <p>
                                                     <b>TIpo de Documento</b>
                                                 </p>
-                                                <select class="form-control">
-                                                    <option>Selecciona</option>
-                                                    <option>Cedula ciudadania</option>
-                                                    <option>Cedula Extranjeria</option>
+                                                <select class="form-control" name="tipo_documento" required>
+                                                    <option>-- Seleccione tipo de documento --</option>
+                                                    <option name="CC">CC</option>
+                                                    <option name="TI">TI</option>
+                                                    <option name="CE">CE</option>
+                                                    <option name="RC">RC</option>
                                                 </select>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" placeholder="Numero Identidad">
+                                                        <input type="text" class="form-control date" name="documento" placeholder="Numero Identidad">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" placeholder="Dirrecion">
+                                                        <input type="text" class="form-control date" name="dirrecion" placeholder="Dirrecion">
                                                     </div>
                                                 </div>
                                             </div>
@@ -60,14 +73,7 @@
                                             <div class="col-md-4">
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" placeholder="Barrio">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="input-group">
-                                                    <div class="form-line">
-                                                        <input type="text" class="form-control date" placeholder="Ciudad">
+                                                        <input type="text" class="form-control date" name="ciudad" placeholder="Ciudad">
                                                     </div>
                                                 </div>
                                             </div>
@@ -78,7 +84,18 @@
                                                         <i class="material-icons">phone_iphone</i>
                                                     </span>
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control mobile-phone-number">
+                                                        <input type="text" class="form-control mobile-phone-number" name="telefono">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <b>Telefono (Adicional)</b>
+                                                <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">phone_iphone</i>
+                                            </span>
+                                                    <div class="form-line">
+                                                        <input type="text" class="form-control mobile-phone-number" placeholder="" name="telefono">
                                                     </div>
                                                 </div>
                                             </div>
@@ -87,14 +104,14 @@
                                             <div class="col-md-5">
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" placeholder="Profesion">
+                                                        <input type="text" class="form-control date" placeholder="Profesion" name="profesion">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-5">
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" placeholder="Empresa">
+                                                        <input type="text" class="form-control date" placeholder="Empresa" name="empresa_labora">
                                                     </div>
                                                 </div>
                                             </div>
@@ -104,56 +121,54 @@
                                                 <p>
                                                     <b>Parentesco con el Interno</b>
                                                 </p>
-                                                <select class="form-control">
+                                                <select class="form-control" name="parentesco" required>
                                                     <option>Selecciona</option>
-                                                    <option>Madre</option>
-                                                    <option>Padre</option>
-                                                    <option>Hijo(a)</option>
-                                                    <option>Tio(a)</option>
-                                                    <option>Primo(a)</option>
-                                                    <option>Amigo(a)</option>
+                                                    <option name="madre">Madre</option>
+                                                    <option name="padre">Padre</option>
+                                                    <option name="hijo(a)">Hijo(a)</option>
+                                                    <option name="tio(a)">Tio(a)</option>
+                                                    <option name="primo(a)">Primo(a)</option>
+                                                    <option name="amigo(a)">Amigo(a)</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="row clearfix">
-                                            <div class="col-md-7">
+                                            <div class="col-md-5">
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" placeholder="Ha sufrido alguna emfermedad ?.">
+                                                        <input type="text" class="form-control date" name="sufrir_emfermedad" placeholder="Ha sufrido alguna emfermedad ?.">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <div class="input-group">
+                                                    <div class="form-line">
+                                                        <input type="text" class="form-control date" name="operado" placeholder="Has sido Operado?.">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row clearfix">
-                                            <div class="col-md-6">
+                                            <div class="col-md-5">
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" placeholder="Has sido Operado?.">
+                                                        <input type="text" class="form-control date" name="nombre" placeholder="Eps-Sisben-Ars">
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div class="col-md-5">
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" placeholder="Eps-Sisben-Ars">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row clearfix">
-                                            <div class="col-md-7">
-                                                <div class="input-group">
-                                                    <div class="form-line">
-                                                        <input type="text" class="form-control date" placeholder="Ha estado hospitalizado?.">
+                                                        <input type="text" class="form-control date" name="hospitalizacion" placeholder="Ha estado hospitalizado?.">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row clearfix">
-                                            <div class="col-md-7">
+                                            <div class="col-md-5">
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" placeholder="Toma algun medicamento ?.">
+                                                        <input type="text" class="form-control date" name="medicamento" placeholder="Toma algun medicamento ?.">
                                                     </div>
                                                 </div>
                                             </div>
@@ -166,47 +181,7 @@
                                                 <i class="material-icons">attach_money</i>
                                             </span>
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control money-dollar" placeholder="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <b>Telefono (Adicionales)</b>
-                                                <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <i class="material-icons">phone_iphone</i>
-                                            </span>
-                                                    <div class="form-line">
-                                                        <input type="text" class="form-control mobile-phone-number" placeholder="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row clearfix">
-                                            <div class="col-md-6">
-                                                <div class="input-group">
-                                                    <div class="form-line">
-                                                        <input type="text" class="form-control date" placeholder="Firma del Acudiente">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <b>Telefono </b>
-                                                <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <i class="material-icons">phone_iphone</i>
-                                            </span>
-                                                    <div class="form-line">
-                                                        <input type="text" class="form-control mobile-phone-number" placeholder="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row clearfix">
-                                            <div class="col-md-6">
-                                                <div class="input-group">
-                                                    <div class="form-line">
-                                                        <input type="text" class="form-control date" placeholder="Firma del interno">
+                                                        <input type="text" class="form-control money-dollar" name="aporte" placeholder="">
                                                     </div>
                                                 </div>
                                             </div>
@@ -222,7 +197,7 @@
                                             NOTA. La colchoneta, las sabanas, las camisetas del uniforme y el dinero no
                                             tienen devolución.
                                         </p>
-                                        <button class="btn btn-primary waves-effect" type="submit">Enviar</button>
+                                        <button class="btn btn-primary waves-effect" type="submit">Guardar</button>
 
                                     </div>
                                 </div>
