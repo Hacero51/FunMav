@@ -11,6 +11,8 @@ class Sensibilidad_superficial extends Model
     public $timestamps = false;
 
     protected  $fillable = [
-
+        'calor',
+        'frio',
+        'dolor'
     ];
 }

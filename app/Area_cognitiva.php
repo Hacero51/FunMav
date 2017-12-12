@@ -11,6 +11,15 @@ class Area_cognitiva extends Model
     public $timestamps = false;
 
     protected  $fillable = [
-
+        'vision',
+        'nivel_atencion',
+        'concentracion',
+        'habilidad_solucionar_problemas',
+        'creatividad',
+        'iniciativa',
+        'competencia',
+        'interpretacion',
+        'planeacion',
+        'observaciones'
     ];
 }

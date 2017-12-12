@@ -11,6 +11,7 @@ class Evaluacion_terapia_ocupacional extends Model
     public $timestamps = false;
 
     protected  $fillable = [
-
+        'emfermedad_actual',
+        'emfermedad_natural'
     ];
 }

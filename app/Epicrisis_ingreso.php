@@ -11,6 +11,8 @@ class Epicrisis_ingreso extends Model
     public $timestamps = false;
 
     protected  $fillable = [
-
+        'fecha',
+        'motivo_consulta',
+        'emfermedad_actual'
     ];
 }

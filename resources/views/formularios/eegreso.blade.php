@@ -20,7 +20,8 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="body">
-                            <form>
+                            <form id="form_validation" method="POST" action="{{url("")}}">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <div id="form_validation">
                                     <div class="input-group-lg">
                                         <br>
@@ -30,7 +31,7 @@
                                                 <tr>
                                                     <th>Fecha</th>
                                                     <th>
-                                                        <input align="right" type="date" class="form-control date" placeholder="dd/mm/aaaa">
+                                                        <input align="right" type="date" name="fecha" class="form-control date" placeholder="dd/mm/aaaa">
                                                     </th>
                                                 </tr>
                                                 </thead>
@@ -38,46 +39,46 @@
                                                 <tr>
                                                     <th>Hora</th>
                                                     <th>
-                                                        <input align="right" type="time"  class="form-control date" placeholder="hh/mm">
+                                                        <input align="right" type="time" name="hora" class="form-control date" placeholder="hh/mm">
                                                     </th>
                                                 </tr>
                                                 <tr>
                                                     <th>Linea de Pago</th>
                                                     <th>
-                                                        <select class="form-control">
+                                                        <select class="form-control" name="forma_pago">
                                                             <option>seleccion</option>
-                                                            <option>Efectivo</option>
-                                                            <option>Consignacion Bancaria</option>
-                                                            <option>Cheque</option>
+                                                            <option name="efectivo">Efectivo</option>
+                                                            <option name="banco">Consignacion Bancaria</option>
+                                                            <option name="cheque">Cheque</option>
                                                         </select>
                                                     </th>
                                                 </tr>
                                                 <tr>
                                                     <th>Servicio</th>
                                                     <th>
-                                                        <input type="text" class="form-control date">
+                                                        <input type="text" name="servicio" class="form-control date">
                                                     </th>
                                                 </tr>
                                                 <tr>
                                                     <th>Sexo</th>
                                                     <th>
-                                                        <select class="form-control">
-                                                            <option>seleccion sexo</option>
-                                                            <option>Femenino</option>
-                                                            <option>Masculino</option>
+                                                        <select class="form-control" name="sexo">
+                                                            <option>2. seleccion sexo</option>
+                                                            <option name="femenino">Femenino</option>
+                                                            <option name="masculino">Masculino</option>
                                                         </select>
                                                     </th>
                                                 </tr>
                                                 <tr>
                                                     <th>Edad</th>
                                                     <th>
-                                                        <input type="text" class="form-control date">
+                                                        <input type="text" name="edad" class="form-control date">
                                                     </th>
                                                 </tr>
                                                 <tr>
                                                     <th>Nombres y Apellidos</th>
                                                     <th>
-                                                        <input type="text" class="form-control" name="names" required>
+                                                        <input type="text" name="nombres" class="form-control" name="names" required>
                                                     </th>
                                                 </tr>
                                                 </tbody>
@@ -96,22 +97,22 @@
                                                     <tr>
                                                         <td>Incapacidad</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="incapacidad">
                                                                 <option>seleccion</option>
-                                                                <option>si</option>
-                                                                <option>No</option>
+                                                                <option name="si">si</option>
+                                                                <option name="no">No</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Estado de Salud</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="estado_salud">
                                                                 <option>seleccion</option>
-                                                                <option>vivo</option>
-                                                                <option>muerto</option>
-                                                                <option>remitido</option>
-                                                                <option>egreso.voluntario</option>
+                                                                <option name="vivo">vivo</option>
+                                                                <option name="muerto">muerto</option>
+                                                                <option name="remitido">remitido</option>
+                                                                <option name="egreso voluntario">egreso voluntario</option>
                                                             </select>
                                                         </td>
                                                     </tr>
@@ -124,7 +125,7 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <textarea rows="3" class="form-control no-resize" placeholder=""></textarea>
+                                                        <textarea rows="3" class="form-control no-resize" name="plan_mejora_ambulatorio" placeholder=""></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -134,7 +135,7 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <textarea rows="3" class="form-control no-resize" placeholder=""></textarea>
+                                                        <textarea rows="3" class="form-control no-resize" name="medicamentos" placeholder=""></textarea>
                                                     </div>
                                                 </div>
                                             </div>

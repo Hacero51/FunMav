@@ -20,7 +20,8 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="body">
-                            <form>
+                            <form id="form_validation" method="POST" action="{{url("")}}">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <div id="form_validation">
                                     <div class="input-group-lg">
                                         <div class="row clearfix">
@@ -31,7 +32,7 @@
                                                 </p>
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date">
+                                                        <input type="text" name="numero" class="form-control date">
                                                     </div>
                                                 </div>
                                             </div>
@@ -44,7 +45,7 @@
                                                         <i class="material-icons">date_range</i>
                                                     </span>
                                                     <div class="form-line">
-                                                        <input type="date" class="form-control date" placeholder="dd/mm/aaaa">
+                                                        <input type="date" class="form-control date" name="fecha" placeholder="dd/mm/aaaa">
                                                     </div>
                                                 </div>
                                             </div>
@@ -56,7 +57,7 @@
                                                 </p>
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date">
+                                                        <input type="text" name="sesion" class="form-control date">
                                                     </div>
                                                 </div>
                                             </div>
@@ -67,7 +68,7 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <textarea rows="2" class="form-control no-resize" placeholder=""></textarea>
+                                                        <textarea rows="2" class="form-control no-resize" name="asistentes" placeholder=""></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -78,7 +79,7 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <textarea rows="2" class="form-control no-resize" placeholder=""></textarea>
+                                                        <textarea rows="2" class="form-control no-resize" name="objectivo_trabajar" placeholder=""></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -89,7 +90,7 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <textarea rows="5" class="form-control no-resize" placeholder=""></textarea>
+                                                        <textarea rows="5" class="form-control no-resize" name="resumen" placeholder=""></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -100,7 +101,7 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <textarea rows="3" class="form-control no-resize" placeholder=""></textarea>
+                                                        <textarea rows="3" class="form-control no-resize" name="hipotesis" placeholder=""></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -111,7 +112,7 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <textarea rows="3" class="form-control no-resize" placeholder=""></textarea>
+                                                        <textarea rows="3" class="form-control no-resize" name="tarea" placeholder=""></textarea>
                                                     </div>
                                                 </div>
                                             </div>

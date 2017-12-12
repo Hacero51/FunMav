@@ -11,6 +11,11 @@ class Antecedente_clinico extends Model
     public $timestamps = false;
 
     protected  $fillable = [
-
+        'funcion_familiar',
+        'motivo_consulta',
+        'diagnostico',
+        'definicion_problema',
+        'hipotesis',
+        'observacion'
     ];
 }

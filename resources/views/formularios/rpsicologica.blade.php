@@ -20,7 +20,8 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="body">
-                            <form>
+                            <form id="form_validation" method="POST" action="{{url("")}}">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <div id="form_validation">
                                     <div class="input-group-lg">
                                         <div class="row clearfix">
@@ -32,25 +33,32 @@
                                                         <i class="material-icons">date_range</i>
                                                     </span>
                                                     <div class="form-line">
-                                                        <input type="date" class="form-control date" placeholder="dd/mm/aaaa">
+                                                        <input type="date" class="form-control date" name="fecha" placeholder="dd/mm/aaaa">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <h2 class="card-inside-title">1. Datos Personales del Remitido</h2>
                                         <div class="row clearfix">
-                                            <div class="col-md-8">
+                                            <div class="col-md-5">
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" placeholder="Nombres y apellidos">
+                                                        <input type="text" class="form-control date" name="nombres"  placeholder="Nombres">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <div class="input-group">
+                                                    <div class="form-line">
+                                                        <input type="text" class="form-control date" name="apellidos" placeholder="Apellidos">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-3">
-                                                <select class="form-control">
-                                                    <option>seleccione sexo</option>
-                                                    <option>Femenino</option>
-                                                    <option>Masculino</option>
+                                                <select class="form-control" name="sexo">
+                                                    <option>2. seleccion sexo</option>
+                                                    <option name="femenino">Femenino</option>
+                                                    <option name="masculino">Masculino</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -58,14 +66,14 @@
                                             <div class="col-md-2">
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" placeholder="Edad">
+                                                        <input type="text" class="form-control date" name="edad" placeholder="Edad">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-3">
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" placeholder="Ciudad o lugar">
+                                                        <input type="text" class="form-control date" name="ciudad" placeholder="Ciudad o lugar">
                                                     </div>
                                                 </div>
                                             </div>
@@ -76,19 +84,19 @@
                                                     <i class="material-icons">date_range</i>
                                                 </span>
                                                     <div class="form-line">
-                                                        <input type="date" class="form-control date" placeholder="dd/mm/aaaa">
+                                                        <input type="date" class="form-control date" name="fecha" placeholder="dd/mm/aaaa">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-1">
                                             </div>
                                             <div class="col-md-3">
-                                                <select class="form-control">
-                                                    <option>Seleccione tipo documento</option>
-                                                    <option>Cedula ciudadania</option>
-                                                    <option>Tajeteta Identidad</option>
-                                                    <option>Cedula Extranjeria</option>
-                                                    <option>Registro Civil</option>
+                                                <select class="form-control" name="tipo_documento" required>
+                                                    <option>-- Seleccione tipo de documento --</option>
+                                                    <option name="CC">CC</option>
+                                                    <option name="TI">TI</option>
+                                                    <option name="CE">CE</option>
+                                                    <option name="RC">RC</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -96,29 +104,29 @@
                                             <div class="col-md-2">
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" placeholder="Numero de Cedula">
+                                                        <input type="text" class="form-control date" name="documento" placeholder="Numero de Cedula">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-3">
-                                                <select class="form-control">
-                                                    <option>seleccione sexo</option>
-                                                    <option>Femenino</option>
-                                                    <option>Masculino</option>
+                                                <select class="form-control" name="sexo">
+                                                    <option>2. seleccion sexo</option>
+                                                    <option name="femenino">Femenino</option>
+                                                    <option name="masculino">Masculino</option>
                                                 </select>
                                             </div>
                                             <div class="col-md-3">
                                                 <select class="form-control">
                                                     <option>seleccione Escolaridad</option>
-                                                    <option>Primaria</option>
-                                                    <option>Secundaria</option>
-                                                    <option>Universidad</option>
+                                                    <option name="primaria">Primaria</option>
+                                                    <option name="secundaria">Secundaria</option>
+                                                    <option name="universidad">Universidad</option>
                                                 </select>
                                             </div>
                                             <div class="col-md-3">
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" placeholder="Estado Civil">
+                                                        <input type="text" class="form-control date" name="estado_civil" placeholder="Estado Civil">
                                                     </div>
                                                 </div>
                                             </div>
@@ -127,14 +135,14 @@
                                             <div class="col-md-4">
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" placeholder="Dirrecion">
+                                                        <input type="text" class="form-control date" name="dirrecion" placeholder="Dirrecion">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" placeholder="Telefono">
+                                                        <input type="text" class="form-control date" name="telefono" placeholder="Telefono">
                                                     </div>
                                                 </div>
                                             </div>
@@ -142,14 +150,14 @@
                                         <h2 class="card-inside-title">Remite Paciente a:</h2>
                                         <div class="row clearfix">
                                             <div class="col-md-3">
-                                                <select class="form-control">
-                                                    <option>seleccione</option>
-                                                    <option>Medico General</option>
-                                                    <option>Psiquiatria</option>
-                                                    <option>Eps</option>
-                                                    <option>Sisben</option>
-                                                    <option>Otros</option>
-                                                    <option>Observacion</option>
+                                                <select class="form-control" name="remite">
+                                                    <option>-seleccione-</option>
+                                                    <option name="medico_general">Medico General</option>
+                                                    <option name="psiquiatria">Psiquiatria</option>
+                                                    <option name="eps">Eps</option>
+                                                    <option name="sisben">Sisben</option>
+                                                    <option name="otros">Otros</option>
+                                                    <option name="observacion">Observacion</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -158,7 +166,7 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <textarea rows="3" class="form-control no-resize"></textarea>
+                                                        <textarea rows="3" class="form-control no-resize" name="despcripcion"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -168,7 +176,7 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <textarea rows="3" class="form-control no-resize"></textarea>
+                                                        <textarea rows="3" class="form-control no-resize" name="motivo_remision"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -178,7 +186,7 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <textarea rows="3" class="form-control no-resize"></textarea>
+                                                        <textarea rows="3" class="form-control no-resize" name="recomendaciones"></textarea>
                                                     </div>
                                                 </div>
                                             </div>

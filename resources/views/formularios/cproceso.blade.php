@@ -20,7 +20,8 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="body">
-                            <form>
+                            <form id="form_validation" method="POST" action="{{url("")}}">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <div id="form_validation">
                                     <div class="input-group-lg">
                                         <div class="row clearfix">
@@ -31,7 +32,7 @@
                                                 </p>
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date">
+                                                        <input type="text" class="form-control date" name="numero_hc" >
                                                     </div>
                                                 </div>
                                             </div>
@@ -44,7 +45,7 @@
                                                         <i class="material-icons">date_range</i>
                                                     </span>
                                                     <div class="form-line">
-                                                        <input type="date" class="form-control date" placeholder="dd/mm/aaaa">
+                                                        <input type="date" class="form-control date" name="fecha" placeholder="dd/mm/aaaa">
                                                     </div>
                                                 </div>
                                             </div>
@@ -56,7 +57,7 @@
                                                 </p>
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date">
+                                                        <input type="text" name="sesion" class="form-control date">
                                                     </div>
                                                 </div>
                                             </div>
@@ -69,7 +70,7 @@
                                             <div class="col-md-10">
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" placeholder="1. Cumplimiento de Objectivos:">
+                                                        <input type="text" class="form-control date" name="cumplimiento" placeholder="1. Cumplimiento de Objectivos:">
                                                     </div>
                                                 </div>
                                             </div>
@@ -80,7 +81,7 @@
                                             <div class="col-md-10">
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" placeholder="2. Cierre Semestral:">
+                                                        <input type="text" class="form-control date"  name="cierre_semestral" placeholder="2. Cierre Semestral:">
                                                     </div>
                                                 </div>
                                             </div>
@@ -91,7 +92,7 @@
                                             <div class="col-md-10">
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" placeholder="3. Otros:">
+                                                        <input type="text" class="form-control date" name="otros" placeholder="3. Otros:">
                                                     </div>
                                                 </div>
                                             </div>
@@ -102,7 +103,7 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <textarea rows="5" class="form-control no-resize" placeholder=""></textarea>
+                                                        <textarea rows="5" class="form-control no-resize" name="e_p_c" placeholder=""></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -113,7 +114,7 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <textarea rows="5" class="form-control no-resize" placeholder=""></textarea>
+                                                        <textarea rows="5" class="form-control no-resize" name="e_p_p" placeholder=""></textarea>
                                                     </div>
                                                 </div>
                                             </div>

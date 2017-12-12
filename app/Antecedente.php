@@ -11,7 +11,11 @@ class Antecedente extends Model
     public $timestamps = false;
 
     protected  $fillable = [
-
+        'patologia',
+        'quirurjicos',
+        'toxicos',
+        'farmacologicos',
+        'inmunisacion'
     ];
 
 }

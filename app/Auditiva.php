@@ -11,6 +11,8 @@ class Auditiva extends Model
     public $timestamps = false;
 
     protected  $fillable = [
-
+        'fuerte',
+        'leve',
+        'vibrante'
     ];
 }

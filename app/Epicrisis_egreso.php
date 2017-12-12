@@ -11,6 +11,11 @@ class Epicrisis_egreso extends Model
     public $timestamps = false;
 
     protected  $fillable = [
-
+        'fecha',
+        'incapacidades',
+        'plan_mejora',
+        'medicamentos',
+        'estado_salud',
+        'observaciones'
     ];
 }

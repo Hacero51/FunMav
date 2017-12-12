@@ -11,6 +11,9 @@ class Sensibilidad_profunda extends Model
     public $timestamps = false;
 
     protected  $fillable = [
-
+        'barognosia',
+        'esterognosia',
+        'diferenciacion_texturas',
+        'grafestesia'
     ];
 }

@@ -11,6 +11,14 @@ class Patrones_integrales_movimiento extends Model
     public $timestamps = false;
 
     protected  $fillable = [
-
+        'alcance_plano_superior',
+        'alcance_plano_inferior',
+        'agarre_mano_llena',
+        'agarre_cilindrp',
+        'enganche',
+        'salto_involuntario',
+        'lanzar_proporcional',
+        'lanzar_rudimentaria',
+        'observaciones'
     ];
 }

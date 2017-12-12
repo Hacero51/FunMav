@@ -11,6 +11,8 @@ class Intervencion extends Model
     public $timestamps = false;
 
     protected  $fillable = [
-
+        'objetivo_general',
+        'objetivo_especifico',
+        'tecnica'
     ];
 }

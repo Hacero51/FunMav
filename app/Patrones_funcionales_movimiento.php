@@ -11,6 +11,20 @@ class Patrones_funcionales_movimiento extends Model
     public $timestamps = false;
 
     protected  $fillable = [
-
+        'mano_cabeza',
+        'mano_boca',
+        'mano_espalda',
+        'mano_hombro',
+        'mano_pierna',
+        'mano_pie',
+        'mano_cola',
+        'mano_bilateral',
+        'destreza_manual',
+        'motricidad_gruesa',
+        'motricidad_fina',
+        'movimiento_bilateral',
+        'coordinacion',
+        'velocidad_desempeno',
+        'observaciones'
     ];
 }

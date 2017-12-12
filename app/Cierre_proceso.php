@@ -11,6 +11,9 @@ class Cierre_proceso extends Model
     public $timestamps = false;
 
     protected  $fillable = [
-
+        'fecha',
+        'motivo',
+        'e_p_c',
+        'e_p_p'
     ];
 }

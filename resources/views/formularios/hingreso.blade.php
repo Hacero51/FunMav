@@ -20,7 +20,8 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="body">
-                            <form>
+                            <form id="form_validation" method="POST" action="{{url("")}}">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <div id="form_validation">
                                     <div class="input-group-lg">
                                         <br>
@@ -32,7 +33,7 @@
                                                 <tr>
                                                     <th>FECHA DE CONSULTA</th>
                                                     <th>
-                                                        <input align="right" type="date" class="form-control date" placeholder="dd/mm/aaaa">
+                                                        <input align="right" type="date" class="form-control date" name="fecha_consulta" placeholder="dd/mm/aaaa">
                                                     </th>
                                                 </tr>
                                                 </thead>
@@ -40,59 +41,59 @@
                                                 <tr>
                                                     <th>PACIENTE</th>
                                                     <th>
-                                                        <input type="text" class="form-control date">
+                                                        <input type="text" name="nombres" class="form-control date">
                                                     </th>
                                                 </tr>
                                                 <tr>
                                                     <th>IDENTIFICACION</th>
                                                     <th>
-                                                        <input type="text" class="form-control date">
+                                                        <input type="text" name="documento" class="form-control date">
                                                     </th>
                                                 </tr>
                                                 <tr>
                                                     <th>FECHA DE NACIMIENTO</th>
                                                     <th>
-                                                        <input align="right" type="date" class="form-control date" placeholder="dd/mm/aaaa">
+                                                        <input align="right" type="date" name="fecha_nacimiento" class="form-control date" placeholder="dd/mm/aaaa">
                                                     </th>
                                                 </tr>
                                                 <tr>
                                                     <th>EDAD</th>
                                                     <th>
-                                                        <input type="text" class="form-control date">
+                                                        <input type="text" class="form-control date" name="edad">
                                                     </th>
                                                 </tr>
                                                 <tr>
                                                     <th>EMPRESA PRESTADORA DE SALUD</th>
                                                     <th>
-                                                        <input type="text" class="form-control date">
+                                                        <input type="text" class="form-control date" name="nombre">
                                                     </th>
                                                 </tr>
                                                 <tr>
                                                     <th>DIRECCION</th>
                                                     <th>
-                                                        <input type="text" class="form-control date">
+                                                        <input type="text" class="form-control date" name="dirrecion">
                                                     </th>
                                                 </tr>
                                                 <tr>
                                                     <th>TELEFONO</th>
                                                     <th>
-                                                        <input type="text" class="form-control date">
+                                                        <input type="text" class="form-control date" name="telefono">
                                                     </th>
                                                 </tr>
                                                 <tr>
                                                     <th>SEXO</th>
                                                     <th>
-                                                        <select class="form-control">
-                                                            <option>seleccion sexo</option>
-                                                            <option>Femenino</option>
-                                                            <option>Masculino</option>
+                                                        <select class="form-control" name="sexo">
+                                                            <option>2. seleccion sexo</option>
+                                                            <option name="femenino">Femenino</option>
+                                                            <option name="masculino">Masculino</option>
                                                         </select>
                                                     </th>
                                                 </tr>
                                                 <tr>
-                                                    <th>MUNICIPIO</th>
+                                                    <th>CIUDAD</th>
                                                     <th>
-                                                        <input type="text" class="form-control date">
+                                                        <input type="text"  name="ciudad" class="form-control date">
                                                     </th>
                                                 </tr>
                                                 </tbody>
@@ -106,7 +107,7 @@
                                                 <tr>
                                                     <th>NOMBRES Y APELLIDO</th>
                                                     <th>
-                                                        <input type="text" class="form-control date">
+                                                        <input type="text" name="nombres" class="form-control date">
                                                     </th>
                                                 </tr>
                                                 </thead>
@@ -114,19 +115,19 @@
                                                 <tr>
                                                     <th>DIRECCION</th>
                                                     <th>
-                                                        <input type="text" class="form-control date">
+                                                        <input type="text" name="dirrecion" class="form-control date">
                                                     </th>
                                                 </tr>
                                                 <tr>
                                                     <th>TELEFONO</th>
                                                     <th>
-                                                        <input type="text" class="form-control date">
+                                                        <input type="text" name="telefono" class="form-control date">
                                                     </th>
                                                 </tr>
                                                 <tr>
                                                     <th>PARENTESCO</th>
                                                     <th>
-                                                        <input type="text" class="form-control date">
+                                                        <input type="text" name="parentesco" class="form-control date">
                                                     </th>
                                                 </tr>
                                                 </tbody>
@@ -138,7 +139,7 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <textarea rows="3" class="form-control no-resize" placeholder="Motivo de Consulta"></textarea>
+                                                        <textarea rows="3" class="form-control no-resize" name="motivo_consulta" placeholder="Motivo de Consulta"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -149,7 +150,7 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <textarea rows="4" class="form-control no-resize"></textarea>
+                                                        <textarea rows="4" name="observaciones" class="form-control no-resize"></textarea>
                                                     </div>
                                                 </div>
                                             </div>

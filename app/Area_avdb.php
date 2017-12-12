@@ -11,6 +11,11 @@ class Area_avdb extends Model
     public $timestamps = false;
 
     protected  $fillable = [
-
+        'alimentacion',
+        'vestido',
+        'higiene_mayor',
+        'higiene_menor',
+        'desplazamiento',
+        'observacion'
     ];
 }

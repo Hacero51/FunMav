@@ -11,6 +11,10 @@ class Visual extends Model
     public $timestamps = false;
 
     protected  $fillable = [
-
+        'agudes_visual',
+        'campo_visual',
+        'forma',
+        'color',
+        'tamano'
     ];
 }

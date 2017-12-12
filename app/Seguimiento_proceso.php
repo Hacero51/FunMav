@@ -11,6 +11,10 @@ class Seguimiento_proceso extends Model
     public $timestamps = false;
 
     protected  $fillable = [
-
+        'fecha',
+        'asistentes',
+        'resumen',
+        'hipotesis',
+        'compromiso'
     ];
 }
