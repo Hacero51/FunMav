@@ -24,12 +24,23 @@
                             <h2>Datos Personales</h2>
                         </div>
                         <div class="body">
-                            <form>
+                            <form id="form_validation" method="POST" action="{{url("")}}">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <div id="form_validation">
-                                    <div class="form-group form-float" >
-                                        <div class="form-line">
-                                            <input type="text" class="form-control" name="names" required>
-                                            <label class="form-label">Nombres y Apellidos</label>
+                                    <div class="row clearfix">
+                                        <div class="col-md-5">
+                                            <div class="input-group">
+                                                <div class="form-line">
+                                                    <input type="text" class="form-control date" name="nombres"  placeholder="Nombres">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="input-group">
+                                                <div class="form-line">
+                                                    <input type="text" class="form-control date" name="apellidos" placeholder="Apellidos">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="input-group-lg">
@@ -41,14 +52,14 @@
                                                     <i class="material-icons">date_range</i>
                                                 </span>
                                                     <div class="form-line">
-                                                        <input type="date" class="form-control date" placeholder="dd/mm/aaaa">
+                                                        <input type="date" class="form-control date" name="fecha" placeholder="dd/mm/aaaa">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" placeholder="Edad">
+                                                        <input type="text" class="form-control date" name="edad" placeholder="Edad">
                                                     </div>
                                                 </div>
                                             </div>
@@ -58,23 +69,23 @@
                                                 <p>
                                                     <b>Estado Civil</b>
                                                 </p>
-                                                <select class="form-control">
+                                                <select class="form-control" name="estado_civil">
                                                     <option>Seleccione</option>
-                                                    <option>Soltero(a)</option>
-                                                    <option>Casado(a)</option>
-                                                    <option>Viudo(a)</option>
-                                                    <option>Union libre</option>
+                                                    <option name="soltero(a)">Soltero(a)</option>
+                                                    <option name="casado(a)">Casado(a)</option>
+                                                    <option name="viudo(a)">Viudo(a)</option>
+                                                    <option name="union libre">Union libre</option>
                                                 </select>
                                             </div>
                                             <div class="col-md-6">
                                                 <p>
                                                     <b>Escolaridad</b>
                                                 </p>
-                                                <select class="form-control">
+                                                <select class="form-control" name="escolaridad">
                                                     <option>Seleccione</option>
-                                                    <option>Primaria</option>
-                                                    <option>Segundaria</option>
-                                                    <option>Universidad</option>
+                                                    <option name="primaria">Primaria</option>
+                                                    <option name="segundaria">Segundaria</option>
+                                                    <option name="universidad">Universidad</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -82,14 +93,14 @@
                                             <div class="col-md-6">
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" placeholder="Emfermedad Actual">
+                                                        <input type="text" class="form-control date" name="emfermedad_actual" placeholder="Emfermedad Actual">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" placeholder="Natural">
+                                                        <input type="text" class="form-control date" name="natural" placeholder="Natural">
                                                     </div>
                                                 </div>
                                             </div>
@@ -107,99 +118,99 @@
                                                     <tr>
                                                         <td>Alcance plano superior</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="alcance_plano_superior">
                                                                 <option>seleccion</option>
-                                                                <option>Funcional</option>
-                                                                <option>Semifuncional</option>
-                                                                <option>No Funcional</option>
+                                                                <option name="funcional">Funcional</option>
+                                                                <option name="semifuncional">Semifuncional</option>
+                                                                <option name="no funcional">No Funcional</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Alcance plano inferior</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="alcance_plano_inferior">
                                                                 <option>seleccion</option>
-                                                                <option>Funcional</option>
-                                                                <option>Semifuncional</option>
-                                                                <option>No Funcional</option>
+                                                                <option name="funcional">Funcional</option>
+                                                                <option name="semifuncional">Semifuncional</option>
+                                                                <option name="no funcional">No Funcional</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Agarre a mano llena</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="agarre_mano_llena">
                                                                 <option>seleccion</option>
-                                                                <option>Funcional</option>
-                                                                <option>Semifuncional</option>
-                                                                <option>No Funcional</option>
+                                                                <option name="funcional">Funcional</option>
+                                                                <option name="semifuncional">Semifuncional</option>
+                                                                <option name="no funcional">No Funcional</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Agarre cilíndrico</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="agarre_cilindrico">
                                                                 <option>seleccion</option>
-                                                                <option>Funcional</option>
-                                                                <option>Semifuncional</option>
-                                                                <option>No Funcional</option>
+                                                                <option name="funcional">Funcional</option>
+                                                                <option name="semifuncional">Semifuncional</option>
+                                                                <option name="no funcional">No Funcional</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Enganche</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="enganche">
                                                                 <option>seleccion</option>
-                                                                <option>Funcional</option>
-                                                                <option>Semifuncional</option>
-                                                                <option>No Funcional</option>
+                                                                <option name="funcional">Funcional</option>
+                                                                <option name="semifuncional">Semifuncional</option>
+                                                                <option name="no funcional">No Funcional</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Saltar involuntario</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="saltar_involuntario">
                                                                 <option>seleccion</option>
-                                                                <option>Funcional</option>
-                                                                <option>Semifuncional</option>
-                                                                <option>No Funcional</option>
+                                                                <option name="funcional">Funcional</option>
+                                                                <option name="semifuncional">Semifuncional</option>
+                                                                <option name="no funcional">No Funcional</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Saltar voluntario</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="saltar_voluntario">
                                                                 <option>seleccion</option>
-                                                                <option>Funcional</option>
-                                                                <option>Semifuncional</option>
-                                                                <option>No Funcional</option>
+                                                                <option name="funcional">Funcional</option>
+                                                                <option name="semifuncional">Semifuncional</option>
+                                                                <option name="no funcional">No Funcional</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Lanzar con proporción</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="lanzar_proporcion">
                                                                 <option>seleccion</option>
-                                                                <option>Funcional</option>
-                                                                <option>Semifuncional</option>
-                                                                <option>No Funcional</option>
+                                                                <option name="funcional">Funcional</option>
+                                                                <option name="semifuncional">Semifuncional</option>
+                                                                <option name="no funcional">No Funcional</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Lanzar con rudimentaria</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="lanzar_rudimentaria">
                                                                 <option>seleccion</option>
-                                                                <option>Funcional</option>
-                                                                <option>Semifuncional</option>
-                                                                <option>No Funcional</option>
+                                                                <option name="funcional">Funcional</option>
+                                                                <option name="semifuncional">Semifuncional</option>
+                                                                <option name="no funcional">No Funcional</option>
                                                             </select>
                                                         </td>
                                                     </tr>
@@ -212,7 +223,7 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <textarea rows="3" class="form-control no-resize" placeholder=""></textarea>
+                                                        <textarea rows="3" class="form-control no-resize" name="observaciones" placeholder=""></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -230,44 +241,44 @@
                                                     <tr>
                                                         <td>Mano-Cabeza</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="mano_cabeza">
                                                                 <option>seleccion</option>
-                                                                <option>Funcional</option>
-                                                                <option>Semifuncional</option>
-                                                                <option>No Funcional</option>
+                                                                <option name="funcional">Funcional</option>
+                                                                <option name="semifuncional">Semifuncional</option>
+                                                                <option name="no funcional">No Funcional</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Mano-boca</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="mano_boca">
                                                                 <option>seleccion</option>
-                                                                <option>Funcional</option>
-                                                                <option>Semifuncional</option>
-                                                                <option>No Funcional</option>
+                                                                <option name="funcional">Funcional</option>
+                                                                <option name="semifuncional">Semifuncional</option>
+                                                                <option name="no funcional">No Funcional</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Mano-Hombro</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="mano_hombro">
                                                                 <option>seleccion</option>
-                                                                <option>Funcional</option>
-                                                                <option>Semifuncional</option>
-                                                                <option>No Funcional</option>
+                                                                <option name="funcional">Funcional</option>
+                                                                <option name="semifuncional">Semifuncional</option>
+                                                                <option name="no funcional">No Funcional</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Mano-espalda</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="mano_espalda">
                                                                 <option>seleccion</option>
-                                                                <option>Funcional</option>
-                                                                <option>Semifuncional</option>
-                                                                <option>No Funcional</option>
+                                                                <option name="funcional">Funcional</option>
+                                                                <option name="semifuncional">Semifuncional</option>
+                                                                <option name="no funcional">No Funcional</option>
                                                             </select>
                                                         </td>
                                                     </tr>
@@ -275,44 +286,44 @@
                                                         <td>
                                                             Mano-pierna</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="mano_pierna">
                                                                 <option>seleccion</option>
-                                                                <option>Funcional</option>
-                                                                <option>Semifuncional</option>
-                                                                <option>No Funcional</option>
+                                                                <option name="funcional">Funcional</option>
+                                                                <option name="semifuncional">Semifuncional</option>
+                                                                <option name="no funcional">No Funcional</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Mano-pie</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="mano_pie">
                                                                 <option>seleccion</option>
-                                                                <option>Funcional</option>
-                                                                <option>Semifuncional</option>
-                                                                <option>No Funcional</option>
+                                                                <option name="funcional">Funcional</option>
+                                                                <option name="semifuncional">Semifuncional</option>
+                                                                <option name="no funcional">No Funcional</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Mano-cola</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="mano_cola">
                                                                 <option>seleccion</option>
-                                                                <option>Funcional</option>
-                                                                <option>Semifuncional</option>
-                                                                <option>No Funcional</option>
+                                                                <option name="funcional">Funcional</option>
+                                                                <option name="semifuncional">Semifuncional</option>
+                                                                <option name="no funcional">No Funcional</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Mano-bilateral</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="mano_bilateral">
                                                                 <option>seleccion</option>
-                                                                <option>Funcional</option>
-                                                                <option>Semifuncional</option>
-                                                                <option>No Funcional</option>
+                                                                <option name="funcional">Funcional</option>
+                                                                <option name="semifuncional">Semifuncional</option>
+                                                                <option name="no funcional">No Funcional</option>
                                                             </select>
                                                         </td>
                                                     </tr>
@@ -325,7 +336,7 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <textarea rows="3" class="form-control no-resize" placeholder=""></textarea>
+                                                        <textarea rows="3" class="form-control no-resize" name="observaciones" placeholder=""></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -343,110 +354,110 @@
                                                     <tr>
                                                         <td>Observación</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="observacion">
                                                                 <option>seleccion</option>
-                                                                <option>Alta</option>
-                                                                <option>Media</option>
-                                                                <option>Baja</option>
+                                                                <option name="alta">Alta</option>
+                                                                <option name="media">Media</option>
+                                                                <option name="baja">Baja</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Nivel de Atención</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="nivel_atencion">
                                                                 <option>seleccion</option>
-                                                                <option>Alta</option>
-                                                                <option>Media</option>
-                                                                <option>Baja</option>
+                                                                <option name="alta">Alta</option>
+                                                                <option name="media">Media</option>
+                                                                <option name="baja">Baja</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Concentración</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="concentracion">
                                                                 <option>seleccion</option>
-                                                                <option>Alta</option>
-                                                                <option>Media</option>
-                                                                <option>Baja</option>
+                                                                <option name="alta">Alta</option>
+                                                                <option name="media">Media</option>
+                                                                <option name="baja">Baja</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Habilidad solucionar </td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="habilidad_solucionar">
                                                                 <option>seleccion</option>
-                                                                <option>Alta</option>
-                                                                <option>Media</option>
-                                                                <option>Baja</option>
+                                                                <option name="alta">Alta</option>
+                                                                <option name="media">Media</option>
+                                                                <option name="baja">Baja</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Problemas</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="problemas">
                                                                 <option>seleccion</option>
-                                                                <option>Alta</option>
-                                                                <option>Media</option>
-                                                                <option>Baja</option>
+                                                                <option name="alta">Alta</option>
+                                                                <option name="media">Media</option>
+                                                                <option name="baja">Baja</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Creatividad</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="creatividad">
                                                                 <option>seleccion</option>
-                                                                <option>Alta</option>
-                                                                <option>Media</option>
-                                                                <option>Baja</option>
+                                                                <option name="alta">Alta</option>
+                                                                <option name="media">Media</option>
+                                                                <option name="baja">Baja</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Iniciativa</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="iniciativa">
                                                                 <option>seleccion</option>
-                                                                <option>Alta</option>
-                                                                <option>Media</option>
-                                                                <option>Baja</option>
+                                                                <option name="alta">Alta</option>
+                                                                <option name="media">Media</option>
+                                                                <option name="baja">Baja</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Competencia</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="competencia">
                                                                 <option>seleccion</option>
-                                                                <option>Alta</option>
-                                                                <option>Media</option>
-                                                                <option>Baja</option>
+                                                                <option name="alta">Alta</option>
+                                                                <option name="media">Media</option>
+                                                                <option name="baja">Baja</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Interpretación</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="interpretacion">
                                                                 <option>seleccion</option>
-                                                                <option>Alta</option>
-                                                                <option>Media</option>
-                                                                <option>Baja</option>
+                                                                <option name="alta">Alta</option>
+                                                                <option name="media">Media</option>
+                                                                <option name="baja">Baja</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Planificación</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="planificacion">
                                                                 <option>seleccion</option>
-                                                                <option>Alta</option>
-                                                                <option>Media</option>
-                                                                <option>Baja</option>
+                                                                <option name="alta">Alta</option>
+                                                                <option name="media">Media</option>
+                                                                <option name="baja">Baja</option>
                                                             </select>
                                                         </td>
                                                     </tr>
@@ -459,7 +470,7 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <textarea rows="3" class="form-control no-resize" placeholder=""></textarea>
+                                                        <textarea rows="3" class="form-control no-resize" name="observaciones" placeholder=""></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -477,55 +488,55 @@
                                                     <tr>
                                                         <td>Alimentación</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="alimentacion">
                                                                 <option>seleccion</option>
-                                                                <option>Independiente</option>
-                                                                <option>Semindependiente</option>
-                                                                <option>Dependiente</option>
+                                                                <option name="independiente">Independiente</option>
+                                                                <option name="semindependiente">Semindependiente</option>
+                                                                <option name="dependiente">Dependiente</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Vestido</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="vestido">
                                                                 <option>seleccion</option>
-                                                                <option>Independiente</option>
-                                                                <option>Semindependiente</option>
-                                                                <option>Dependiente</option>
+                                                                <option name="independiente">Independiente</option>
+                                                                <option name="semindependiente">Semindependiente</option>
+                                                                <option name="dependiente">Dependiente</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Higiene Mayor</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="higiene_mayor">
                                                                 <option>seleccion</option>
-                                                                <option>Independiente</option>
-                                                                <option>Semindependiente</option>
-                                                                <option>Dependiente</option>
+                                                                <option name="independiente">Independiente</option>
+                                                                <option name="semindependiente">Semindependiente</option>
+                                                                <option name="dependiente">Dependiente</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Higiene menor</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="higiene_menor">
                                                                 <option>seleccion</option>
-                                                                <option>Independiente</option>
-                                                                <option>Semindependiente</option>
-                                                                <option>Dependiente</option>
+                                                                <option name="independiente">Independiente</option>
+                                                                <option name="semindependiente">Semindependiente</option>
+                                                                <option name="dependiente">Dependiente</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Desplazamiento</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="desplazamiento">
                                                                 <option>seleccion</option>
-                                                                <option>Independiente</option>
-                                                                <option>Semindependiente</option>
-                                                                <option>Dependiente</option>
+                                                                <option name="independiente">Independiente</option>
+                                                                <option name="semindependiente">Semindependiente</option>
+                                                                <option name="dependiente">Dependiente</option>
                                                             </select>
                                                         </td>
                                                     </tr>
@@ -538,7 +549,7 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <textarea rows="3" class="form-control no-resize" placeholder=""></textarea>
+                                                        <textarea rows="3" class="form-control no-resize" name="observaciones" placeholder=""></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -551,11 +562,11 @@
                                                     <td>Sensibilidad Superficial (Calor Frio
                                                         Dolor)</td>
                                                     <td>
-                                                        <select class="form-control">
+                                                        <select class="form-control" name="sensibilidad_superficial">
                                                             <option>seleccion</option>
-                                                            <option>Funcional</option>
-                                                            <option>Semifuncional</option>
-                                                            <option>No Funcional</option>
+                                                            <option name="funcional">Funcional</option>
+                                                            <option name="semifuncional">Semifuncional</option>
+                                                            <option name="no funcional">No Funcional</option>
                                                         </select>
                                                     </td>
                                                 </tr>
@@ -567,11 +578,11 @@
                                                         De texturas
                                                         Grafestesia)</td>
                                                     <td>
-                                                        <select class="form-control">
+                                                        <select class="form-control" name="sensibilidad_profunda">
                                                             <option>seleccion</option>
-                                                            <option>Funcional</option>
-                                                            <option>Semifuncional</option>
-                                                            <option>No Funcional</option>
+                                                            <option name="funcional">Funcional</option>
+                                                            <option name="semifuncional">Semifuncional</option>
+                                                            <option name="no funcional">No Funcional</option>
                                                         </select>
                                                     </td>
                                                 </tr>
@@ -582,11 +593,11 @@
                                                         Color
                                                         Tamaño)</td>
                                                     <td>
-                                                        <select class="form-control">
+                                                        <select class="form-control" name="visual">
                                                             <option>seleccion</option>
-                                                            <option>Funcional</option>
-                                                            <option>Semifuncional</option>
-                                                            <option>No Funcional</option>
+                                                            <option name="funcional">Funcional</option>
+                                                            <option name="semifuncional">Semifuncional</option>
+                                                            <option name="no funcional">No Funcional</option>
                                                         </select>
                                                     </td>
                                                 </tr>
@@ -595,11 +606,11 @@
                                                         Leve
                                                         Vibrantes)</td>
                                                     <td>
-                                                        <select class="form-control">
+                                                        <select class="form-control" name="auditiva">
                                                             <option>seleccion</option>
-                                                            <option>Funcional</option>
-                                                            <option>Semifuncional</option>
-                                                            <option>No Funcional</option>
+                                                            <option name="funcional">Funcional</option>
+                                                            <option name="semifuncional">Semifuncional</option>
+                                                            <option name="no funcional">No Funcional</option>
                                                         </select>
                                                     </td>
                                                 </tr>
@@ -609,11 +620,11 @@
                                                         Partes finas
                                                         Partes gruesas)</td>
                                                     <td>
-                                                        <select class="form-control">
+                                                        <select class="form-control" name="esquema_corporal">
                                                             <option>seleccion</option>
-                                                            <option>Funcional</option>
-                                                            <option>Semifuncional</option>
-                                                            <option>No Funcional</option>
+                                                            <option name="funcional">Funcional</option>
+                                                            <option name="semifuncional">Semifuncional</option>
+                                                            <option name="no funcional">No Funcional</option>
                                                         </select>
                                                     </td>
                                                 </tr>
@@ -625,7 +636,7 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <textarea rows="3" class="form-control no-resize" placeholder=""></textarea>
+                                                        <textarea rows="3" class="form-control no-resize" nam="observaciones" placeholder=""></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -643,66 +654,66 @@
                                                     <tr>
                                                         <td>Destreza manual</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="destreza_manual">
                                                                 <option>seleccion</option>
-                                                                <option>Funcional</option>
-                                                                <option>Semifuncional</option>
-                                                                <option>No Funcional</option>
+                                                                <option name="funcional">Funcional</option>
+                                                                <option name="semifuncional">Semifuncional</option>
+                                                                <option name="no funcional">No Funcional</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Motricidad Gruesa</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="motricidad_gruesa">
                                                                 <option>seleccion</option>
-                                                                <option>Funcional</option>
-                                                                <option>Semifuncional</option>
-                                                                <option>No Funcional</option>
+                                                                <option name="funcional">Funcional</option>
+                                                                <option name="semifuncional">Semifuncional</option>
+                                                                <option name="no funcional">No Funcional</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Motricidad Fina</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="motricidad_fina">
                                                                 <option>seleccion</option>
-                                                                <option>Funcional</option>
-                                                                <option>Semifuncional</option>
-                                                                <option>No Funcional</option>
+                                                                <option name="funcional">Funcional</option>
+                                                                <option name="semifuncional">Semifuncional</option>
+                                                                <option name="no funcional">No Funcional</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Movimientos bilaterales</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="movimiento_bilateral">
                                                                 <option>seleccion</option>
-                                                                <option>Funcional</option>
-                                                                <option>Semifuncional</option>
-                                                                <option>No Funcional</option>
+                                                                <option name="funcional">Funcional</option>
+                                                                <option name="semifuncional">Semifuncional</option>
+                                                                <option name="no funcional">No Funcional</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Coordinación</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="coordinacion">
                                                                 <option>seleccion</option>
-                                                                <option>Funcional</option>
-                                                                <option>Semifuncional</option>
-                                                                <option>No Funcional</option>
+                                                                <option name="funcional">Funcional</option>
+                                                                <option name="semifuncional">Semifuncional</option>
+                                                                <option name="no funcional">No Funcional</option>
                                                             </select>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Velocidad para el desempeño</td>
                                                         <td>
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="velocidad_desempeño">
                                                                 <option>seleccion</option>
-                                                                <option>Funcional</option>
-                                                                <option>Semifuncional</option>
-                                                                <option>No Funcional</option>
+                                                                <option name="funcional">Funcional</option>
+                                                                <option name="semifuncional">Semifuncional</option>
+                                                                <option name="no funcional">No Funcional</option>
                                                             </select>
                                                         </td>
                                                     </tr>
@@ -715,7 +726,7 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <textarea rows="3" class="form-control no-resize" placeholder=""></textarea>
+                                                        <textarea rows="3" class="form-control no-resize"  name="observaciones" placeholder=""></textarea>
                                                     </div>
                                                 </div>
                                             </div>
