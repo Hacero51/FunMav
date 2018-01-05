@@ -28,7 +28,7 @@ class HvController extends Controller
      */
     public function create()
     {
-        //
+        return view('formularios.prueba');
     }
 
     /**
@@ -39,12 +39,20 @@ class HvController extends Controller
      */
     public function store(Request $request)
     {
-        Paciente::create($request->all());
-        Ubicacion::create($request->all());
-        Centro_rehabilitacion::create($request->all());
+        //dd($request);
+        $paciente= new Paciente($request->all());
+        $paciente->usuario_id="1";
+        $paciente->acudiente_id="1";
+        $paciente->eps_id="1";
+        $paciente->ubicacion_id="1";
+        $paciente->save();
 
-        Session::flash('message','Se registro exitosamente.');
-        return redirect('usuario');
+        //dd(Paciente::id);
+        //Ubicacion::create($request->all());
+        //Centro_rehabilitacion::create($request->all());
+
+        //Session::flash('message','Se registro exitosamente.');
+        //return redirect('usuario');
     }
 
     /**

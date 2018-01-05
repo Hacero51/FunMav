@@ -46,6 +46,11 @@ Route::get('/eegreso', function () {
     return view('formularios/eegreso');
 });
 
+Route::get('/prueba', function () {
+    return view('formularios/prueba');
+});
+
+
 
 Route::get('/encuesta', function () {
     return view('/encuestaeto');
@@ -63,3 +68,7 @@ Route::group([],function(){
     Route::resource('usuario','UsuarioController');
 });
 
+
+Route::group([],function(){
+    Route::resource('hoja-vida','HvController');
+});
