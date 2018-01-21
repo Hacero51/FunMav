@@ -64,7 +64,7 @@
                             <div class="col-md-6">
                                 <div class="input-group">
                                     <div class="form-line">
-                                        <textarea name="dirrecion" cols="1" rows="2" class="form-control no-resize" placeholder="Dirección" required></textarea>
+                                        <textarea name="dirrecion" cols="1" rows="1" class="form-control no-resize" placeholder="Dirección" required></textarea>
                                     </div>
                                 </div>
                             </div>

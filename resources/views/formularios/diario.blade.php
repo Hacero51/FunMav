@@ -41,13 +41,12 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
-                                                <b>Fecha</b>
                                                 <div class="input-group">
                                                     <span class="input-group-addon">
                                                         <i class="material-icons">date_range</i>
                                                     </span>
                                                     <div class="form-line">
-                                                        <input type="date" class="form-control date" name="fecha" placeholder="dd/mm/aaaa">
+                                                        <input type="date" class="form-control date" name="fecha" placeholder="">
                                                     </div>
                                                 </div>
                                             </div>

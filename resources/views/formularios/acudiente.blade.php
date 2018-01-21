@@ -25,14 +25,14 @@
                                 <div id="form_validation">
                                     <br>
                                     <div class="row clearfix">
-                                        <div class="col-md-5">
+                                        <div class="col-md-6">
                                             <div class="input-group">
                                                 <div class="form-line">
                                                     <input type="text" class="form-control date" name="nombres"  placeholder="Nombres">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-5">
+                                        <div class="col-md-6">
                                             <div class="input-group">
                                                 <div class="form-line">
                                                     <input type="text" class="form-control date" name="apellidos" placeholder="Apellidos">
@@ -43,11 +43,8 @@
                                     <div class="input-group-lg">
                                         <div class="row clearfix">
                                             <div class="col-md-4">
-                                                <p>
-                                                    <b>TIpo de Documento</b>
-                                                </p>
                                                 <select class="form-control" name="tipo_documento" required>
-                                                    <option>-- Seleccione tipo de documento --</option>
+                                                    <option>-- Seleccione Tipo De Documento --</option>
                                                     <option name="CC">CC</option>
                                                     <option name="TI">TI</option>
                                                     <option name="CE">CE</option>
@@ -78,51 +75,44 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
-                                                <b>Numero Celular</b>
                                                 <div class="input-group">
                                                     <span class="input-group-addon">
                                                         <i class="material-icons">phone_iphone</i>
                                                     </span>
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control mobile-phone-number" name="telefono">
+                                                        <input type="text" class="form-control mobile-phone-number" placeholder="Telefono Celular" name="telefono">
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-3">
-                                                <b>Telefono (Adicional)</b>
+                                            <div class="col-md-4">
                                                 <div class="input-group">
                                             <span class="input-group-addon">
                                                 <i class="material-icons">phone_iphone</i>
                                             </span>
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control mobile-phone-number" placeholder="" name="telefono">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row clearfix">
-                                            <div class="col-md-5">
-                                                <div class="input-group">
-                                                    <div class="form-line">
-                                                        <input type="text" class="form-control date" placeholder="Profesion" name="profesion">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <div class="input-group">
-                                                    <div class="form-line">
-                                                        <input type="text" class="form-control date" placeholder="Empresa" name="empresa_labora">
+                                                        <input type="text" class="form-control mobile-phone-number" placeholder="Telefono (Adicional)" name="telefono">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row clearfix">
                                             <div class="col-md-4">
-                                                <p>
-                                                    <b>Parentesco con el Interno</b>
-                                                </p>
+                                                <div class="input-group">
+                                                    <div class="form-line">
+                                                        <input type="text" class="form-control date" placeholder="Profesion" name="profesion">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-group">
+                                                    <div class="form-line">
+                                                        <input type="text" class="form-control date" placeholder="Empresa" name="empresa_labora">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
                                                 <select class="form-control" name="parentesco" required>
-                                                    <option>Selecciona</option>
+                                                    <option>-- Selecciona Parentesco Con Interno --</option>
                                                     <option name="madre">Madre</option>
                                                     <option name="padre">Padre</option>
                                                     <option name="hijo(a)">Hijo(a)</option>
@@ -133,55 +123,51 @@
                                             </div>
                                         </div>
                                         <div class="row clearfix">
-                                            <div class="col-md-5">
+                                            <div class="col-md-6">
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" name="sufrir_emfermedad" placeholder="Ha sufrido alguna emfermedad ?.">
+                                                        <textarea  name="sufrir_emfermedad" cols="3" rows="3" class="form-control no-resize" placeholder="Ha sufrido alguna emfermedad ?." required></textarea>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-5">
+                                            <div class="col-md-6">
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" name="operado" placeholder="Has sido Operado?.">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row clearfix">
-                                            <div class="col-md-5">
-                                                <div class="input-group">
-                                                    <div class="form-line">
-                                                        <input type="text" class="form-control date" name="nombre" placeholder="Eps-Sisben-Ars">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <div class="input-group">
-                                                    <div class="form-line">
-                                                        <input type="text" class="form-control date" name="hospitalizacion" placeholder="Ha estado hospitalizado?.">
+                                                        <textarea name="operado"  cols="3" rows="3" class="form-control no-resize" placeholder="Has sido Operado?." required></textarea>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row clearfix">
-                                            <div class="col-md-5">
+                                            <div class="col-md-6">
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" name="medicamento" placeholder="Toma algun medicamento ?.">
+                                                        <textarea name="medicamento"  cols="3" rows="3" class="form-control no-resize" placeholder="Toma algun medicamento ?." required></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-group">
+                                                    <div class="form-line">
+                                                        <textarea name="hospitalizacion" cols="3" rows="3" class="form-control no-resize" placeholder="Ha estado hospitalizado ?." required></textarea>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row clearfix">
-                                            <div class="col-md-5">
-                                                <b>Valor aporte</b>
+                                            <div class="col-md-6">
+                                                <select class="form-control" name="nombre" required>
+                                                    <option>-- Selecciona Eps-Sisben-Ars --</option>
+                                                    <option name=""></option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
                                                 <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <i class="material-icons">attach_money</i>
-                                            </span>
+                                                <span class="input-group-addon">
+                                                    <i class="material-icons">attach_money</i>
+                                                </span>
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control money-dollar" name="aporte" placeholder="">
+                                                        <input type="text" class="form-control money-dollar" name="aporte" placeholder="Valor Aporte">
                                                     </div>
                                                 </div>
                                             </div>
