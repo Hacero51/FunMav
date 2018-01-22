@@ -39,9 +39,15 @@
                                                 </thead>
                                                 <tbody>
                                                 <tr>
-                                                    <th>PACIENTE</th>
+                                                    <th>NOMBRES</th>
                                                     <th>
                                                         <input type="text" name="nombres" class="form-control date">
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th>APELLIDOS</th>
+                                                    <th>
+                                                        <input type="text" name="apellidos" class="form-control date">
                                                     </th>
                                                 </tr>
                                                 <tr>
@@ -84,7 +90,7 @@
                                                     <th>SEXO</th>
                                                     <th>
                                                         <select class="form-control" name="sexo">
-                                                            <option>2. seleccion sexo</option>
+                                                            <option>-- Seleccion Sexo --</option>
                                                             <option name="femenino">Femenino</option>
                                                             <option name="masculino">Masculino</option>
                                                         </select>
@@ -105,9 +111,15 @@
                                             <table  class="table table-bordered">
                                                 <thead>
                                                 <tr>
-                                                    <th>NOMBRES Y APELLIDO</th>
+                                                    <th>NOMBRES</th>
                                                     <th>
                                                         <input type="text" name="nombres" class="form-control date">
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th>APELLIDOS</th>
+                                                    <th>
+                                                        <input type="text" name="apellidos" class="form-control date">
                                                     </th>
                                                 </tr>
                                                 </thead>
@@ -127,7 +139,15 @@
                                                 <tr>
                                                     <th>PARENTESCO</th>
                                                     <th>
-                                                        <input type="text" name="parentesco" class="form-control date">
+                                                        <select class="form-control" name="parentesco">
+                                                            <option>-- Seleccion Parentesco Con Paciente --</option>
+                                                            <option name="madre">Madre</option>
+                                                            <option name="padre">Padre</option>
+                                                            <option name="hermano(a)">Hermano(a)</option>
+                                                            <option name="tio(a)">Tio(a)</option>
+                                                            <option name="abuelo(a)">Abuelo(a)</option>
+                                                            <option name="amigo(a)">Amigo(a)</option>
+                                                        </select>
                                                     </th>
                                                 </tr>
                                                 </tbody>

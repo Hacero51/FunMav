@@ -36,7 +36,6 @@
                                             <div class="col-md-5">
                                             </div>
                                             <div class="col-md-2">
-                                                <b>Fecha</b>
                                                 <div class="input-group">
                                                     <span align="right" class="input-group-addon">
                                                         <i class="material-icons">date_range</i>
@@ -77,11 +76,8 @@
                                             <div class="col-md-1">
                                             </div>
                                             <div class="col-md-4">
-                                                <p>
-                                                    <b>Parentesco con el Interno</b>
-                                                </p>
                                                 <select class="form-control" name="parentesco" required>
-                                                    <option>Selecciona</option>
+                                                    <option>-- Selecciona Parentesco con el Interno --</option>
                                                     <option name="madre">Madre</option>
                                                     <option name="padre">Padre</option>
                                                     <option name="hijo(a)">Hijo(a)</option>
@@ -97,12 +93,12 @@
                                             </div>
                                             <div class="col-md-3">
                                                 <select class="form-control" name="sexo">
-                                                    <option>seleccione sexo</option>
+                                                    <option>-- Seleccione sexo --</option>
                                                     <option name="femenino">Femenino</option>
                                                     <option name="masculino">Masculino</option>
                                                 </select>
                                             </div>
-                                            <div class="col-md-2">
+                                            <div class="col-md-3">
                                                 <div class="input-group">
                                                     <div class="form-line">
                                                         <input type="text" class="form-control date" name="edad" placeholder="Edad">
@@ -110,11 +106,13 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-3">
-                                                <div class="input-group">
-                                                    <div class="form-line">
-                                                        <input type="text" class="form-control date" name="estado_civil" placeholder="Estado Civil">
-                                                    </div>
-                                                </div>
+                                                <select class="form-control" name="estado_civil">
+                                                    <option>-- Seleccione Estado Civil --</option>
+                                                    <option name="soltero(a)">Soltero(a)</option>
+                                                    <option name="casado(a)">Casado(a)</option>
+                                                    <option name="viudo(a)">Viudo(a)</option>
+                                                    <option name="union libre">union libre</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <br>
@@ -158,7 +156,7 @@
                                             </div>
                                             <div class="col-md-3">
                                                 <select class="form-control" name="sexo">
-                                                    <option>2. seleccion sexo</option>
+                                                    <option>-- Seleccion Sexo --</option>
                                                     <option name="femenino">Femenino</option>
                                                     <option name="masculino">Masculino</option>
                                                 </select>
@@ -182,7 +180,6 @@
                                             <div class="col-md-1">
                                             </div>
                                             <div class="col-md-4">
-                                                <b>3. Fecha nacimiento </b>
                                                 <div class="input-group">
                                                     <span class="input-group-addon">
                                                         <i class="material-icons">date_range</i>
@@ -206,7 +203,7 @@
                                             <div class="col-md-4">
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" name="dirrecion" placeholder="4. Dirrecion de residencia">
+                                                        <input type="text" class="form-control date" name="dirrecion" placeholder="Dirrecion de residencia">
                                                     </div>
                                                 </div>
                                             </div>
@@ -224,7 +221,7 @@
                                             <div class="col-md-4">
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" name="telefono" placeholder="5. Telefono">
+                                                        <input type="text" class="form-control date" name="telefono" placeholder="Telefono">
                                                     </div>
                                                 </div>
                                             </div>
@@ -242,7 +239,7 @@
                                             <div class="col-md-8">
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" name="estudios" placeholder="6. Escolaridad">
+                                                        <input type="text" class="form-control date" name="estudios" placeholder="Escolaridad">
                                                     </div>
                                                 </div>
                                             </div>
@@ -251,19 +248,10 @@
                                             <div class="col-md-1">
                                             </div>
                                             <div class="col-md-4">
-                                                <b>7. Sistema de seguridad en salud </b>
-                                                <div class="input-group">
-                                                    <div class="form-line">
-                                                        <input type="text" class="form-control date" name="nombre" placeholder="E.P.S">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="input-group">
-                                                    <div class="form-line">
-                                                        <input type="text" class="form-control date" name="" placeholder="Sisben">
-                                                    </div>
-                                                </div>
+                                                <select class="form-control" name="nombre" required>
+                                                    <option>-- Seleccione Eps, Sisben, Ars --</option>
+                                                    <option name=""></option>
+                                                </select>
                                             </div>
                                         </div>
                                         <br>

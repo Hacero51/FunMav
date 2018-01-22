@@ -27,7 +27,6 @@
                                         <div class="row clearfix">
                                             <br>
                                             <div class="col-md-2">
-                                                <b>Fecha</b>
                                                 <div class="input-group">
                                                     <span class="input-group-addon">
                                                         <i class="material-icons">date_range</i>
@@ -54,16 +53,16 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-3">
+                                        </div>
+                                        <div class="row clearfix">
+                                            <div class="col-md-4">
                                                 <select class="form-control" name="sexo">
-                                                    <option>2. seleccion sexo</option>
+                                                    <option>-- Seleccion Sexo --</option>
                                                     <option name="femenino">Femenino</option>
                                                     <option name="masculino">Masculino</option>
                                                 </select>
                                             </div>
-                                        </div>
-                                        <div class="row clearfix">
-                                            <div class="col-md-2">
+                                            <div class="col-md-3">
                                                 <div class="input-group">
                                                     <div class="form-line">
                                                         <input type="text" class="form-control date" name="edad" placeholder="Edad">
@@ -72,25 +71,24 @@
                                             </div>
                                             <div class="col-md-3">
                                                 <div class="input-group">
-                                                    <div class="form-line">
-                                                        <input type="text" class="form-control date" name="ciudad" placeholder="Ciudad o lugar">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <b>Fecha de Nacimiento</b>
-                                                <div class="input-group">
-                                                <span class="input-group-addon">
-                                                    <i class="material-icons">date_range</i>
-                                                </span>
+                                                     <span class="input-group-addon">
+                                                        <i class="material-icons">date_range</i>
+                                                    </span>
                                                     <div class="form-line">
                                                         <input type="date" class="form-control date" name="fecha" placeholder="dd/mm/aaaa">
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-1">
-                                            </div>
+                                        </div>
+                                        <div class="row clearfix">
                                             <div class="col-md-3">
+                                                <div class="input-group">
+                                                    <div class="form-line">
+                                                        <input type="text" class="form-control date" name="ciudad" placeholder="Ciudad o lugar">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
                                                 <select class="form-control" name="tipo_documento" required>
                                                     <option>-- Seleccione tipo de documento --</option>
                                                     <option name="CC">CC</option>
@@ -99,22 +97,15 @@
                                                     <option name="RC">RC</option>
                                                 </select>
                                             </div>
-                                        </div>
-                                        <div class="row clearfix">
-                                            <div class="col-md-2">
+                                            <div class="col-md-3">
                                                 <div class="input-group">
                                                     <div class="form-line">
                                                         <input type="text" class="form-control date" name="documento" placeholder="Numero de Cedula">
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-3">
-                                                <select class="form-control" name="sexo">
-                                                    <option>2. seleccion sexo</option>
-                                                    <option name="femenino">Femenino</option>
-                                                    <option name="masculino">Masculino</option>
-                                                </select>
-                                            </div>
+                                        </div>
+                                        <div class="row clearfix">
                                             <div class="col-md-3">
                                                 <select class="form-control">
                                                     <option>seleccione Escolaridad</option>
@@ -130,8 +121,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row clearfix">
                                             <div class="col-md-4">
                                                 <div class="input-group">
                                                     <div class="form-line">
@@ -139,6 +128,8 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="row clearfix">
                                             <div class="col-md-4">
                                                 <div class="input-group">
                                                     <div class="form-line">

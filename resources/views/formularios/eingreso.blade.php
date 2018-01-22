@@ -43,6 +43,18 @@
                                                     </th>
                                                 </tr>
                                                 <tr>
+                                                    <th>Nombres</th>
+                                                    <th>
+                                                        <input type="text" class="form-control" name="nombres" required>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Apellidos</th>
+                                                    <th>
+                                                        <input type="text" class="form-control" name="apellidos" required>
+                                                    </th>
+                                                </tr>
+                                                <tr>
                                                     <th>Edad</th>
                                                     <th>
                                                         <input type="text" name="edad" class="form-control date">
@@ -52,7 +64,7 @@
                                                     <th>Sexo</th>
                                                     <th>
                                                         <select class="form-control" name="sexo">
-                                                            <option>2. seleccion sexo</option>
+                                                            <option>-- Seleccion Sexo --</option>
                                                             <option name="femenino">Femenino</option>
                                                             <option name="masculino">Masculino</option>
                                                         </select>
@@ -68,18 +80,11 @@
                                                     <th>Linea de Pago</th>
                                                     <th>
                                                         <select class="form-control" name="forma_pago">
-                                                            <option>seleccion</option>
+                                                            <option>-- seleccione --</option>
                                                             <option name="efectivo">Efectivo</option>
                                                             <option name="banco">Consignacion Bancaria</option>
                                                             <option name="cheque">Cheque</option>
                                                         </select>
-                                                    </th>
-                                                </tr>
-
-                                                <tr>
-                                                    <th>Nombres y Apellidos</th>
-                                                    <th>
-                                                        <input type="text" class="form-control" name="nombres" required>
                                                     </th>
                                                 </tr>
                                                 <tr>

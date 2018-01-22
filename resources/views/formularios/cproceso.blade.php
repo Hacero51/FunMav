@@ -27,19 +27,15 @@
                                         <div class="row clearfix">
                                             <br>
                                             <div class="col-md-2">
-                                                <p>
-                                                    <b>No. Historia Clinica</b>
-                                                </p>
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" class="form-control date" name="numero_hc" >
+                                                        <input type="text" class="form-control date" name="numero_hc" placeholder="No. Historia Clinica">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-2">
                                             </div>
                                             <div class="col-md-3">
-                                                <b>Fecha</b>
                                                 <div class="input-group">
                                                     <span class="input-group-addon">
                                                         <i class="material-icons">date_range</i>
@@ -52,12 +48,9 @@
                                             <div class="col-md-2">
                                             </div>
                                             <div class="col-md-2">
-                                                <p>
-                                                    <b>No. Sesion</b>
-                                                </p>
                                                 <div class="input-group">
                                                     <div class="form-line">
-                                                        <input type="text" name="sesion" class="form-control date">
+                                                        <input type="text" name="sesion" class="form-control date" placeholder="No. Sesion">
                                                     </div>
                                                 </div>
                                             </div>

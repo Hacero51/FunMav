@@ -43,27 +43,22 @@
                                                     </th>
                                                 </tr>
                                                 <tr>
-                                                    <th>Linea de Pago</th>
+                                                    <th>Nombres</th>
                                                     <th>
-                                                        <select class="form-control" name="forma_pago">
-                                                            <option>seleccion</option>
-                                                            <option name="efectivo">Efectivo</option>
-                                                            <option name="banco">Consignacion Bancaria</option>
-                                                            <option name="cheque">Cheque</option>
-                                                        </select>
+                                                        <input type="text" name="nombres" class="form-control" name="names" required>
                                                     </th>
                                                 </tr>
                                                 <tr>
-                                                    <th>Servicio</th>
+                                                    <th>Apellidos</th>
                                                     <th>
-                                                        <input type="text" name="servicio" class="form-control date">
+                                                        <input type="text" name="apellidos" class="form-control" name="names" required>
                                                     </th>
                                                 </tr>
                                                 <tr>
                                                     <th>Sexo</th>
                                                     <th>
                                                         <select class="form-control" name="sexo">
-                                                            <option>2. seleccion sexo</option>
+                                                            <option>-- Seleccion Sexo --</option>
                                                             <option name="femenino">Femenino</option>
                                                             <option name="masculino">Masculino</option>
                                                         </select>
@@ -76,9 +71,20 @@
                                                     </th>
                                                 </tr>
                                                 <tr>
-                                                    <th>Nombres y Apellidos</th>
+                                                    <th>Linea de Pago</th>
                                                     <th>
-                                                        <input type="text" name="nombres" class="form-control" name="names" required>
+                                                        <select class="form-control" name="forma_pago">
+                                                            <option>-- Seleccione --</option>
+                                                            <option name="efectivo">Efectivo</option>
+                                                            <option name="banco">Consignacion Bancaria</option>
+                                                            <option name="cheque">Cheque</option>
+                                                        </select>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Servicio</th>
+                                                    <th>
+                                                        <input type="text" name="servicio" class="form-control date">
                                                     </th>
                                                 </tr>
                                                 </tbody>
