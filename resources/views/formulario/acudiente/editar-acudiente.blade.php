@@ -9,6 +9,7 @@
 @endsection
 
 @section('contenido')
+
 <div class="container-fluid">
     <div class="block-header">
         <h1>
@@ -16,15 +17,14 @@
         </h1>
     </div>
     <!-- Basic Validation -->
-    <div class="row clearfix">
+    <div class="row clearfix">	
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="body">
-                    <form id="form_validation" method="POST" action="{{url("")}}">
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        <div id="form_validation">
-                            <br>
-                            <div class="row clearfix">
+                    {!! Form::open(['route' => 'acudiente.store', 'method' => 'POST']) !!}
+
+                       <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                       <div class="row clearfix">
                                 <div class="col-md-6">
                                     <div class="input-group">
                                         <div class="form-line">
@@ -122,7 +122,6 @@
                                         </select>
                                     </div>
                                 </div>
-                                
                                 <div class="row clearfix">
                                     <div class="col-md-6">
                                         <select class="form-control" name="nombre" required>
@@ -138,7 +137,7 @@
                                             <div class="form-line">
                                                 <input type="text" class="form-control money-dollar" name="aporte" placeholder="Valor Aporte">
                                             </div>
-                                        </div>  
+                                        </div>
                                     </div>
                                 </div>
                                 <h3>NOTA EXCLUSIVA PARA EL ACUDIENTE O FAMILIAR:</h3>
@@ -152,14 +151,14 @@
                                     NOTA. La colchoneta, las sabanas, las camisetas del uniforme y el dinero no
                                     tienen devolución.
                                 </p>
-                                <button class="btn btn-primary waves-effect" type="submit">Guardar</button>
+                        {!! Form::submit('Crear', ['class' =>'btn btn-primary']) !!}
 
-                            </div>
-                        </div>
-                    </form>
+
+                    {!! Form::close() !!}
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 @endsection

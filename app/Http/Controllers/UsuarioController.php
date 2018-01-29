@@ -40,7 +40,7 @@ class UsuarioController extends Controller
 
         Usuario::create($request->all());
 
-        Session::flash('message','El registro fue creado exitosamente.');
+        alert()->success('El registro fue creado exitosamente.','En hora buena')->autoclose(6000);
         return redirect('usuario');
 
     }

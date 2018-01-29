@@ -17,7 +17,7 @@ Route::get('/', function () {
 Route::get('/hv', function () {
     return view('formularios/hv');
 });
-Route::get('/acudiente', function () {
+Route::get('/formulario/acudiente', function () {
     return view('formularios/acudiente');
 });
 Route::get('/diario', function () {
@@ -71,4 +71,8 @@ Route::group([],function(){
 
 Route::group([],function(){
     Route::resource('hoja-vida','HvController');
+});
+
+Route::group([],function(){
+    Route::resource('acudiente','AcudienteController');
 });
