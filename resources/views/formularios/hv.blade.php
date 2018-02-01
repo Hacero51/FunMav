@@ -19,11 +19,12 @@
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
+                        <br>
                         <div class="body">
                             <form id="form_validation" method="POST" action="{{url("")}}">
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                <div id="wizard_horizontal">
-                                    <h2>Informacion Basica</h2>
+                                <div>
+
                                     <section>
                                         <div class="row clearfix">
                                             <div class="col-md-5">
@@ -81,9 +82,6 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
-                                                <p>
-                                                    <b>TIpo de Documento</b>
-                                                </p>
                                                 <select class="form-control" name="tipo_documento" required>
                                                     <option>-- Seleccione tipo de documento --</option>
                                                     <option name="CC">CC</option>
@@ -111,7 +109,6 @@
                                         </div>
                                     </section>
 
-                                    <h2>Informacion Segundaria</h2>
                                     <section>
                                         <h2 class="card-inside-title">Sexo</h2>
                                         <div class="form-group">
@@ -123,11 +120,13 @@
                                         </div>
                                         <div class="row clearfix">
                                             <div class="col-md-4">
-                                                <div class="input-group">
-                                                    <div class="form-line">
-                                                        <input type="text" class="form-control date" name="estado_civil" placeholder="Estado Civil">
-                                                    </div>
-                                                </div>
+                                                <select class="form-control" name="estado_civil">
+                                                    <option>-- Seleccione Estado Civil --</option>
+                                                    <option name="soltero(a)">Soltero(a)</option>
+                                                    <option name="casado(a)">Casado(a)</option>
+                                                    <option name="viudo(a)">Viudo(a)</option>
+                                                    <option name="union libre">union libre</option>
+                                                </select>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="input-group">
@@ -155,7 +154,6 @@
                                         </div>
                                     </section>
 
-                                    <h2>Motivo de Ingreso</h2>
                                     <section>
                                         <div class="container-fluid">
                                             <div class="row clearfix">
@@ -196,7 +194,6 @@
                                          </div>
                                     </section>
 
-                                    <h2>informacion Adicional</h2>
                                     <section>
                                         <h2 align="center" class="card-inside-title">En que centros de Rehabilitacion ha estado</h2>
                                         <div class="row clearfix">
@@ -272,7 +269,7 @@
                                         </div>
                                     </section>
                                 </div>
-                                <button class="btn btn-primary waves-effect" type="submit">Ingresar</button>
+                                <button class="btn btn-primary waves-effect" type="submit">Enviar</button>
                             </form>
                         </div>
                     </div>
