@@ -54,6 +54,8 @@
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="{{asset("../../css/themes/all-themes.css")}}" rel="stylesheet" />
 
+    <link rel="stylesheet" href="{{ asset("https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css") }}">
+
 
 </head>
 
@@ -261,6 +263,8 @@
 </section>
 
 <section class="content">
+    <script src="{{ "https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js" }}"></script>
+    @include('sweet::alert')
     @yield('contenido')
 </section>
 

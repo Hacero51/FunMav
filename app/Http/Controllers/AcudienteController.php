@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Acudiente;
 use Illuminate\Http\Request;
+use Session;
 
 class AcudienteController extends Controller
 {
@@ -13,7 +14,8 @@ class AcudienteController extends Controller
      */
     public function index()
     {
-        //
+        $acudiente= Acudiente::all();
+        return view('formulario.acudiente.listar-acudiente',compact('acudiente'));
     }
 
     /**
@@ -23,7 +25,7 @@ class AcudienteController extends Controller
      */
     public function create()
     {
-        //
+        return view('formulario.acudiente.crear-acudiente');
     }
 
     /**
@@ -34,7 +36,10 @@ class AcudienteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Acudiente::create($request->all());
+        alert()->success('El registro fue creado exitosamente.','En hora buena')->autoclose(6000);
+        return redirect('acudiente');
+        
     }
 
     /**
@@ -56,7 +61,8 @@ class AcudienteController extends Controller
      */
     public function edit($id)
     {
-        //
+        $acudiente=Acudiente::find($id);
+        return view('formulario.acudiente.editar-acudiente',compact('usuario'));
     }
 
     /**

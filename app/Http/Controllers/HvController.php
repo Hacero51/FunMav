@@ -28,7 +28,7 @@ class HvController extends Controller
      */
     public function create()
     {
-        return view('formularios.prueba');
+        return view('formulario.hv');
     }
 
     /**

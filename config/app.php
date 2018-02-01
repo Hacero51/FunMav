@@ -179,7 +179,10 @@ return [
 
         // ...
         Collective\Html\HtmlServiceProvider::class,
-        // ...
+        /*
+        *Sweet Alert
+        */
+        UxWeb\SweetAlert\SweetAlertServiceProvider::class,
 
     ],
 
@@ -234,6 +237,10 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         // ...
+        /*
+        *Sweet Alert
+        */
+        'Alert'=> UxWeb\SweetAlert\SweetAlert::class,
 
     ],
 
