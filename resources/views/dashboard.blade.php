@@ -61,6 +61,7 @@
 
 <body class="theme-red">
 
+
 <!-- Overlay For Sidebars -->
 <div class="overlay"></div>
 <!-- #END# Overlay For Sidebars -->
@@ -102,6 +103,7 @@
         </div>
         <!-- #User Info -->
         <!-- Menu -->
+    @php $menu=0 @endphp
     @yield('menu')
     <!-- #Menu -->
         <!-- Footer -->

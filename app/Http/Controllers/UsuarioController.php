@@ -15,6 +15,7 @@ class UsuarioController extends Controller
      */
     public function index()
     {
+        $menu = 1;
         $usuario =Usuario::all();
         return view('admin.usuarios.listar-usuario',compact('usuario'));
     }

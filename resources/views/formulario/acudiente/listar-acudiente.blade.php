@@ -1,7 +1,7 @@
 @extends('dashboard')
 
 @section('topbar')
-    @include('admin.topbar')
+    @include('admin.topbar',compact($menun1 = 2,$menun2=3))
 @endsection
 
 @section('menu')

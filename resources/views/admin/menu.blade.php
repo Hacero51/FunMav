@@ -1,23 +1,38 @@
 <div class="menu">
     <ul class="list">
         <li class="header">MAIN NAVIGATION</li>
-        <li class="active">
+        <li @if ($menun1==0) class="active" @endif>
             <a href="{{url('/')}}">
                 <i class="material-icons">home</i>
                 <span>Inicio</span>
             </a>
         </li>
-        <li>
+        <li @if ($menun1==1) class="active" @endif>
             <a href="javascript:void(0);" class="menu-toggle">
                 <i class="material-icons">perm_identity</i>
                 <span>Usuarios</span>
             </a>
             <ul class="ml-menu">
-                <li>
+                <li @if ($menun2==1) class="active" @endif >
                     <a href="{{route('usuario.index')}}">Ver Usuarios</a>
                 </li>
-                <li>
+                <li @if ($menun2==2) class="active" @endif >
                     <a href="{{route('usuario.create')}}">Crear Usuarios</a>
+                </li>
+
+            </ul>
+        </li>
+        <li  @if ($menun1==2) class="active" @endif>
+            <a href="javascript:void(0);" class="menu-toggle">
+                <i class="material-icons">perm_identity</i>
+                <span>Acudientes</span>
+            </a>
+            <ul class="ml-menu">
+                <li  @if ($menun2==3) class="active" @endif>
+                    <a href="{{route('acudiente.index')}}">Ver Acudiente</a>
+                </li>
+                <li  @if ($menun2==4) class="active" @endif>
+                    <a href="{{route('acudiente.create')}}">Crear Acudiente</a>
                 </li>
 
             </ul>

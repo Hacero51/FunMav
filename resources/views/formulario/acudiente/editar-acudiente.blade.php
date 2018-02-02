@@ -21,21 +21,21 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="body">
-                    {!! Form::open(['route' => 'acudiente.store', 'method' => 'POST']) !!}
+                    {!! Form::open(['route' => ['acudiente.update',$acudiente], 'method' => 'PUT']) !!}
 
                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
                        <div class="row clearfix">
                                 <div class="col-md-6">
                                     <div class="input-group">
                                         <div class="form-line">
-                                            <input type="text" class="form-control date" name="nombres"  placeholder="Nombres">
+                                            <input type="text" class="form-control date" name="nombres"  value="{{$acudiente->nombres}}" placeholder="Nombres">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="input-group">
                                         <div class="form-line">
-                                            <input type="text" class="form-control date" name="apellidos" placeholder="Apellidos">
+                                            <input type="text" class="form-control date" name="apellidos" value="{{$acudiente->apellidos}}" placeholder="Apellidos">
                                         </div>
                                     </div>
                                 </div>
@@ -45,23 +45,23 @@
                                     <div class="col-md-4">
                                         <select class="form-control" name="tipo_documento" required>
                                             <option>-- Seleccione Tipo De Documento --</option>
-                                            <option name="CC">CC</option>
-                                            <option name="TI">TI</option>
-                                            <option name="CE">CE</option>
-                                            <option name="RC">RC</option>
+                                            <option name="CC" @if($acudiente->tipo_documento == 'CC') selected @endif>CC</option>
+                                            <option name="TI" @if($acudiente->tipo_documento == 'TI') selected @endif>TI</option>
+                                            <option name="CE" @if($acudiente->tipo_documento == 'CE') selected @endif>CE</option>
+                                            <option name="RC" @if($acudiente->tipo_documento == 'RC') selected @endif>RC</option>
                                         </select>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="input-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control date" name="documento" placeholder="Numero Identidad">
+                                                <input type="text" class="form-control date" name="documento" value="{{$acudiente->documento}}" placeholder="Numero Identidad">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="input-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control date" name="dirrecion" placeholder="Dirrecion">
+                                                <input type="text" class="form-control date" name="dirrecion" value="{{$acudiente->dirrecion}}" placeholder="Dirrecion">
                                             </div>
                                         </div>
                                     </div>
@@ -70,7 +70,7 @@
                                     <div class="col-md-4">
                                         <div class="input-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control date" name="ciudad" placeholder="Ciudad">
+                                                <input type="text" class="form-control date" name="ciudad" value="{{$acudiente->ciudad}}" placeholder="Ciudad">
                                             </div>
                                         </div>
                                     </div>
@@ -80,7 +80,7 @@
                                                 <i class="material-icons">phone_iphone</i>
                                             </span>
                                             <div class="form-line">
-                                                <input type="text" class="form-control mobile-phone-number" placeholder="Telefono Celular" name="telefono">
+                                                <input type="text" class="form-control mobile-phone-number" placeholder="Telefono Celular" value="{{$acudiente->telefono}}" name="telefono">
                                             </div>
                                         </div>
                                     </div>
@@ -90,7 +90,7 @@
                                         <i class="material-icons">phone_iphone</i>
                                     </span>
                                             <div class="form-line">
-                                                <input type="text" class="form-control mobile-phone-number" placeholder="Telefono (Adicional)" name="telefono">
+                                                <input type="text" class="form-control mobile-phone-number" placeholder="Telefono (Adicional)" value="{{$acudiente->telefono}}" name="telefono">
                                             </div>
                                         </div>
                                     </div>
@@ -99,26 +99,26 @@
                                     <div class="col-md-4">
                                         <div class="input-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control date" placeholder="Profesion" name="profesion">
+                                                <input type="text" class="form-control date" placeholder="Profesion" value="{{$acudiente->profesion}}" name="profesion">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="input-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control date" placeholder="Empresa" name="empresa_labora">
+                                                <input type="text" class="form-control date" placeholder="Empresa" value="{{$acudiente->empresa_labora}}" name="empresa_labora">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <select class="form-control" name="parentesco" required>
                                             <option>-- Selecciona Parentesco Con Interno --</option>
-                                            <option name="madre">Madre</option>
-                                            <option name="padre">Padre</option>
-                                            <option name="hijo(a)">Hijo(a)</option>
-                                            <option name="tio(a)">Tio(a)</option>
-                                            <option name="primo(a)">Primo(a)</option>
-                                            <option name="amigo(a)">Amigo(a)</option>
+                                            <option name="Madre" @if($acudiente->parentesco == 'Madre') selected @endif>Madre</option>
+                                            <option name="Padre" @if($acudiente->parentesco == 'Padre') selected @endif>Padre</option>
+                                            <option name="Hijo(a)" @if($acudiente->parentesco == 'Hijo(a)') selected @endif>Hijo(a)</option>
+                                            <option name="Tio(a)" @if($acudiente->parentesco == 'Tio(a)') selected @endif>Tio(a)</option>
+                                            <option name="Primo(a)" @if($acudiente->parentesco == 'Primo(a)') selected @endif>Primo(a)</option>
+                                            <option name="Amigo(a)" @if($acudiente->parentesco == 'Amigo(a)') selected @endif>Amigo(a)</option>
                                         </select>
                                     </div>
                                 </div>
@@ -135,7 +135,7 @@
                                             <i class="material-icons">attach_money</i>
                                         </span>
                                             <div class="form-line">
-                                                <input type="text" class="form-control money-dollar" name="aporte" placeholder="Valor Aporte">
+                                                <input type="text" class="form-control money-dollar" name="aporte" value="{{$acudiente->aporte}}" placeholder="Valor Aporte">
                                             </div>
                                         </div>
                                     </div>

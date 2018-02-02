@@ -2,7 +2,7 @@
 @extends('dashboard')
 
 @section('topbar')
-    @include('admin.topbar')
+    @include('admin.topbar',compact($menun1 =1,$menun2=1))
 @endsection
 
 @section('menu')
