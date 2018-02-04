@@ -23,10 +23,6 @@
     <!-- Animation Css -->
     <link href="{{asset("../../plugins/animate-css/animate.css")}}" rel="stylesheet" />
 
-
-    <!-- Sweetalert Css -->
-    <link href="{{asset("../../plugins/sweetalert/sweetalert.css")}}" rel="stylesheet" />
-
     <!-- Colorpicker Css -->
     <link href="{{asset("../../plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.css")}}" rel="stylesheet" />
 
@@ -50,6 +46,10 @@
 
     <!-- Custom Css -->
     <link href="{{asset("../../css/style.css")}}" rel="stylesheet">
+
+    <!-- Bootstrap Material Datetime Picker Css -->
+    <link href="{{asset("../../plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css")}}" rel="stylesheet" />
+
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="{{asset("../../css/themes/all-themes.css")}}" rel="stylesheet" />
@@ -309,6 +309,19 @@
 <!-- Waves Effect Plugin Js -->
 <script src="{{asset("../../plugins/node-waves/waves.js")}}"></script>
 
+<!-- Autosize Plugin Js -->
+<script src="{{asset("../../plugins/autosize/autosize.js")}}"></script>
+
+<!-- Moment Plugin Js -->
+<script src="{{asset("../../plugins/momentjs/moment.js")}}"></script>
+<script type="text/javascript">
+    moment().locale('es');
+
+</script>
+
+<!-- Bootstrap Material Datetime Picker Plugin Js -->
+<script src="{{asset("../../plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js")}}"></script>
+
 <!-- SweetAlert Plugin Js -->
 <script src="{{asset("../../plugins/sweetalert/sweetalert.min.js")}}"></script>
 
@@ -317,9 +330,6 @@
 
 <!-- JQuery Steps Plugin Js -->
 <script src="{{asset("../../plugins/jquery-steps/jquery.steps.js")}}"></script>
-
-<!-- Sweet Alert Plugin Js -->
-<script src="{{asset("../../plugins/sweetalert/sweetalert.min.js")}}"></script>
 
 <!-- Waves Effect Plugin Js -->
 <script src="{{asset("../../plugins/node-waves/waves.js")}}"></script>
@@ -345,6 +355,8 @@
 <script src="{{asset("../../js/pages/forms/form-validation.js")}}"></script>
 
 <script src="{{asset("../../js/pages/forms/form-wizard.js")}}"></script>
+
+<script src="{{asset("../../js/pages/forms/basic-form-elements.js")}}"></script>
 
 <script src="{{asset("../../js/pages/forms/advanced-form-elements.js")}}"></script>
 

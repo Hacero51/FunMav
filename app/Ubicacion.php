@@ -11,6 +11,6 @@ class Ubicacion extends Model
     public $timestamps = false;
 
     protected  $fillable = [
-        'ciudad'
+        'id','ciudad'
     ];
 }

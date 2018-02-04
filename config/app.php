@@ -90,7 +90,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
@@ -241,7 +241,6 @@ return [
         *Sweet Alert
         */
         'Alert'=> UxWeb\SweetAlert\SweetAlert::class,
-
     ],
 
 ];

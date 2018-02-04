@@ -37,6 +37,21 @@
 
             </ul>
         </li>
+        <li  @if ($menun1==3) class="active" @endif>
+            <a href="javascript:void(0);" class="menu-toggle">
+                <i class="material-icons">perm_identity</i>
+                <span>Paciente</span>
+            </a>
+            <ul class="ml-menu">
+                <li  @if ($menun2==5) class="active" @endif>
+                    <a href="{{route('paciente.index')}}">Ver Paciente</a>
+                </li>
+                <li  @if ($menun2==6) class="active" @endif>
+                    <a href="{{route('paciente.create')}}">Crear Paciente</a>
+                </li>
+
+            </ul>
+        </li>
         <li>
             <a href="javascript:void(0);" class="menu-toggle">
                 <i class="material-icons">assignment</i>

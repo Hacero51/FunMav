@@ -1,7 +1,7 @@
 @extends('dashboard')
 
 @section('topbar')
-    @include('admin.topbar')
+    @include('admin.topbar',compact($menun1 = 0,$menun2=0))
 @endsection
 
 @section('menu')
@@ -151,7 +151,7 @@
                                     NOTA. La colchoneta, las sabanas, las camisetas del uniforme y el dinero no
                                     tienen devolución.
                                 </p>
-                        {!! Form::submit('Crear', ['class' =>'btn btn-primary']) !!}
+                        {!! Form::submit('Actualizar', ['class' =>'btn btn-primary']) !!}
 
 
                     {!! Form::close() !!}

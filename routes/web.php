@@ -47,7 +47,7 @@ Route::get('/eegreso', function () {
 });
 
 Route::get('/prueba', function () {
-    return view('formularios/prueba');
+    return view('formulario/hv');
 });
 
 
@@ -66,6 +66,10 @@ Route::get('/admin', function () {
 
 Route::group([],function(){
     Route::resource('usuario','UsuarioController');
+});
+
+Route::group([],function(){
+    Route::resource('paciente','PacienteController');
 });
 
 
