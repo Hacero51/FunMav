@@ -91,18 +91,18 @@
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <select class="form-control" name="nombre"  data-live-search="true" required>
+                                        <select class="form-control" name="eps_id"  data-live-search="true" required>
                                             <option>-- Selecciona Eps --</option>
                                             @foreach($eps as $eps)
-                                                <option name="madre">{{$eps->nombre}}</option>
+                                                <option value="{{ $eps->id }}">{{$eps->nombre}}</option>
                                             @endforeach
                                             </select>
                                     </div>
                                         <div class="col-md-4">
-                                            <select class="form-control" name="ciudad" data-live-search="true" required>
+                                            <select class="form-control" name="ubicacion_id" data-live-search="true" required>
                                                 <option>-- Selecciona ubicacion --</option>
                                                 @foreach($ubicacion as $ubicacion)
-                                                    <option name="ciudad">{{$ubicacion->id}}.{{$ubicacion->ciudad}}</option>
+                                                    <option value="{{$ubicacion->id}}">{{$ubicacion->ciudad}}</option>
                                                 @endforeach
                                             </select>
                                         </div>
