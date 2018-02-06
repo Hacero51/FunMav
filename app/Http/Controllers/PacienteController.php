@@ -40,7 +40,7 @@ class PacienteController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->toArray());
+        //dd($request->toArray());
 
         Paciente::create($request->all());
 

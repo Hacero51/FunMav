@@ -9,6 +9,7 @@ class Paciente extends Model
     use Notifiable;
     protected $table = 'paciente';
     public $timestamps = false;
+    protected $dates = ['foto'];
 
     protected  $fillable = [
         'nombres',
@@ -27,4 +28,5 @@ class Paciente extends Model
         'senales',
         'foto'
     ];
+
 }
