@@ -42,7 +42,13 @@ class PacienteController extends Controller
     {
         //dd($request->toArray());
 
-        Paciente::create($request->all());
+        $paciente= new Paciente($request->all());
+        $paciente->usuario_id=1;
+        $paciente->acudiente_id=1;
+        $paciente->save();
+
+
+
 
 
         alert()->success('El registro fue creado exitosamente.','En hora buena')->autoclose(6000);

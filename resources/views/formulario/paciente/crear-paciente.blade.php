@@ -96,7 +96,7 @@
                                             <select class="form-control" name="eps_id"  data-live-search="true" required>
                                                 <option>-- Selecciona Eps --</option>
                                                 @foreach($eps as $eps)
-                                                    <option value="{{ $eps->id }}">{{$eps->nombre}}</option>
+                                                    <option value={{ $eps->id }}>{{$eps->nombre}}</option>
                                                 @endforeach
                                             </select>
                                         </div>

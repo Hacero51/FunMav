@@ -18,6 +18,7 @@ class Paciente extends Model
         'tipo_documento',
         'procedencia',
         'fecha_nacimiento',
+        'fecha_ingreso',
         'edad',
         'estado_civil',
         'hijos',
@@ -26,7 +27,11 @@ class Paciente extends Model
         'genero',
         'rh',
         'senales',
-        'foto'
+        'foto',
+        'usuario_id',
+        'eps_id',
+        'ubicacion_id',
+        'acudiente_id'
     ];
 
 }
