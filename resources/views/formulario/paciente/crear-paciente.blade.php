@@ -21,7 +21,7 @@
                 <div class="card">
                     <br>
                     <div class="body">
-                        {!! Form::open(['route' => 'paciente.store', 'method' => 'POST',$ubicacion]) !!}
+                        {!! Form::open(['route' => 'paciente.store', 'method' => 'POST',$ubicacion,'files'=> true ]) !!}
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <div>
 
@@ -51,26 +51,9 @@
                                             </div>
                                         </div>
                                         <div class="col-md-4">
-                                            <select class="form-control" name="ubicacion_id" data-live-search="true" required>
-                                                <option>-- Selecciona ubicacion --</option>
-                                                @foreach($ubicacion as $ubicacion)
-                                                    <option value="{{$ubicacion->id}}">{{$ubicacion->ciudad}}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                        <div class="col-md-4">
                                             <div class="input-group">
                                                 <div class="form-line">
                                                     <input type="text" class="form-control date" name="edad" placeholder="Edad">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row clearfix">
-                                        <div class="col-md-4">
-                                            <div class="input-group">
-                                                <div class="form-line">
-                                                    <input type="text" class="datepicker form-control" name="fecha_ingreso" placeholder="Fecha de Ingreso">
                                                 </div>
                                             </div>
                                         </div>
@@ -83,27 +66,12 @@
                                                 <option name="RC">RC</option>
                                             </select>
                                         </div>
+                                    </div>
+                                    <div class="row clearfix">
                                         <div class="col-md-4">
                                             <div class="input-group">
                                                 <div class="form-line">
                                                     <input type="text" class="form-control date" name="documento" placeholder="Numero Identidad">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row clearfix">
-                                        <div class="col-md-4">
-                                            <select class="form-control" name="eps_id"  data-live-search="true" required>
-                                                <option>-- Selecciona Eps --</option>
-                                                @foreach($eps as $eps)
-                                                    <option value={{ $eps->id }}>{{$eps->nombre}}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="input-group">
-                                                <div class="form-line">
-                                                    <input type="text" class="form-control date"  name="procedencia" placeholder="De Donde">
                                                 </div>
                                             </div>
                                         </div>
@@ -114,11 +82,50 @@
                                                 <option name="Femenino">Femenino</option>
                                             </select>
                                         </div>
+                                        <div class="col-md-4">
+                                            <div class="input-group">
+                                                <div class="form">
+                                                    <input type="file" class="form-control date" name="foto">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row clearfix">
+                                        <div class="col-md-4">
+                                            <select class="form-control" name="ubicacion_id" data-live-search="true" required>
+                                                <option>-- Selecciona ubicacion --</option>
+                                                @foreach($ubicacion as $ubicacion)
+                                                    <option value="{{$ubicacion->id}}">{{$ubicacion->ciudad}}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="input-group">
+                                                <div class="form-line">
+                                                    <input type="text" class="form-control date"  name="procedencia" placeholder="Grupo Etnico">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <select class="form-control" name="eps_id"  data-live-search="true" required>
+                                                <option>-- Selecciona Eps --</option>
+                                                @foreach($eps as $eps)
+                                                    <option value={{ $eps->id }}>{{$eps->nombre}}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
                                     </div>
                                 </section>
 
                                 <section>
                                     <div class="row clearfix">
+                                        <div class="col-md-4">
+                                            <div class="input-group">
+                                                <div class="form-line">
+                                                    <input type="text" class="datepicker form-control" name="fecha_ingreso" placeholder="Fecha de Ingreso">
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="col-md-4">
                                             <select class="form-control" name="estado_civil">
                                                 <option>-- Seleccione Estado Civil --</option>
@@ -135,6 +142,8 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="row clearfix">
                                         <div class="col-md-4">
                                             <div class="input-group">
                                                 <div class="form-line">
@@ -142,15 +151,31 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="col-md-4">
+                                            <div class="input-group">
+                                                <div class="form-line">
+                                                    <textarea rows="1" cols="1" class="form-control no-resize" name="senales" placeholder="Señales"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="input-group">
+                                                <div class="form-line">
+                                                    <input type="text" class="form-control date" name="rh" placeholder="RH">
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <h2 class="card-inside-title">Estudios</h2>
-                                    <div class="demo-checkbox">
-                                        <input type="checkbox" id="md_checkbox_1" name="estudios" class="chk-col-yellow"/>
-                                        <label for="md_checkbox_1">Primaria</label>
-                                        <input type="checkbox" id="md_checkbox_2" name="estudios" class="chk-col-blue"/>
-                                        <label for="md_checkbox_2">Secundaria</label>
-                                        <input type="checkbox" id="md_checkbox_3" name="estudios" class="chk-col-red"/>
-                                        <label for="md_checkbox_3">Universidad</label>
+                                    <div class="row clearfix">
+                                        <div class="col-md-4">
+                                            <select class="form-control" name="Estudio">
+                                                <option>-- Seleccione Nivel Educativo --</option>
+                                                <option name="primaria">Primaria</option>
+                                                <option name="secundaria">Secundaria</option>
+                                                <option name="universitaria">Universitaria</option>
+                                                <option name="ninguno">Ninguno</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </section>
                             </div>
