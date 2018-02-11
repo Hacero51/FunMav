@@ -23,18 +23,26 @@
                     <div class="body">
                         {!! Form::open(['route' => 'paciente.store', 'method' => 'POST',$ubicacion,'files'=> true ]) !!}
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                            <div>
-
-                                <section>
+                                 <div>
                                     <div class="row clearfix">
-                                        <div class="col-md-6">
+                                        <div class="col-md-2">
+                                            <output id="list"></output>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="input-group">
+                                                <div class="form">
+                                                    <input type="file" class="form-control date" name="foto" id="files">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
                                             <div class="input-group">
                                                 <div class="form-line">
                                                     <input type="text" class="form-control date" name="nombres"  placeholder="Nombres">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-10">
                                             <div class="input-group">
                                                 <div class="form-line">
                                                     <input type="text" class="form-control date" name="apellidos" placeholder="Apellidos">
@@ -42,6 +50,7 @@
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="row clearfix">
                                         <div class="col-md-4">
                                             <div class="input-group">
@@ -82,13 +91,7 @@
                                                 <option name="Femenino">Femenino</option>
                                             </select>
                                         </div>
-                                        <div class="col-md-4">
-                                            <div class="input-group">
-                                                <div class="form">
-                                                    <input type="file" class="form-control date" name="foto">
-                                                </div>
-                                            </div>
-                                        </div>
+
                                     </div>
                                     <div class="row clearfix">
                                         <div class="col-md-4">
@@ -115,9 +118,6 @@
                                             </select>
                                         </div>
                                     </div>
-                                </section>
-
-                                <section>
                                     <div class="row clearfix">
                                         <div class="col-md-4">
                                             <div class="input-group">
@@ -177,12 +177,9 @@
                                             </select>
                                         </div>
                                     </div>
-                                </section>
-                            </div>
+                                </div>
                             <br>
-                        {!! Form::submit('Crear', ['class' =>'btn btn-primary']) !!}
-
-
+                            {!! Form::submit('Crear', ['class' =>'btn btn-primary']) !!}
                         {!! Form::close() !!}
                     </div>
                 </div>
