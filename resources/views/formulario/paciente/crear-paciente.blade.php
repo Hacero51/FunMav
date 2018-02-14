@@ -25,24 +25,26 @@
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                  <div>
                                     <div class="row clearfix">
-                                        <div class="col-md-2">
-                                            <output id="list"></output>
-                                        </div>
                                         <div class="col-md-3">
                                             <div class="input-group">
                                                 <div class="form">
-                                                    <input type="file" class="form-control date" name="foto" id="files">
+                                                    <input type="file" class="form-control" name="foto" id="files">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-7">
+                                        <div class="col-md-2">
+                                            <output id="list"></output>
+                                        </div>
+                                        <div class="col-md-6">
                                             <div class="input-group">
                                                 <div class="form-line">
                                                     <input type="text" class="form-control date" name="nombres"  placeholder="Nombres">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-10">
+                                        <div class="col-md-5">
+                                        </div>
+                                        <div class="col-md-6">
                                             <div class="input-group">
                                                 <div class="form-line">
                                                     <input type="text" class="form-control date" name="apellidos" placeholder="Apellidos">
@@ -91,9 +93,6 @@
                                                 <option name="Femenino">Femenino</option>
                                             </select>
                                         </div>
-
-                                    </div>
-                                    <div class="row clearfix">
                                         <div class="col-md-4">
                                             <select class="form-control" name="ubicacion_id" data-live-search="true" required>
                                                 <option>-- Selecciona ubicacion --</option>
@@ -102,6 +101,8 @@
                                                 @endforeach
                                             </select>
                                         </div>
+                                    </div>
+                                    <div class="row clearfix">
                                         <div class="col-md-4">
                                             <div class="input-group">
                                                 <div class="form-line">
@@ -117,8 +118,6 @@
                                                 @endforeach
                                             </select>
                                         </div>
-                                    </div>
-                                    <div class="row clearfix">
                                         <div class="col-md-4">
                                             <div class="input-group">
                                                 <div class="form-line">
@@ -126,6 +125,8 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="row clearfix">
                                         <div class="col-md-4">
                                             <select class="form-control" name="estado_civil">
                                                 <option>-- Seleccione Estado Civil --</option>
@@ -142,8 +143,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row clearfix">
                                         <div class="col-md-4">
                                             <div class="input-group">
                                                 <div class="form-line">
@@ -151,6 +150,8 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="row clearfix">
                                         <div class="col-md-4">
                                             <div class="input-group">
                                                 <div class="form-line">
@@ -165,8 +166,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row clearfix">
                                         <div class="col-md-4">
                                             <select class="form-control" name="Estudio">
                                                 <option>-- Seleccione Nivel Educativo --</option>

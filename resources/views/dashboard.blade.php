@@ -57,12 +57,8 @@
     <link rel="stylesheet" href="{{ asset("https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css") }}">
     <style>
         .thumb {
-            height: 150px;
-            margin: 1px 5px
-        }
-        .box{
-            margin: 0 auto;
-            width: 500px;
+            height: 125px;
+            margin: 1px 1px
         }
     </style>
 
