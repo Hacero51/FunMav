@@ -16,8 +16,10 @@ class PacienteController extends Controller
      */
     public function index()
     {
-
-        return view('formulario.paciente.listar-paciente');
+        $paciente= Paciente::all();
+        $ubicacion=Ubicacion::all();
+        $eps=Eps::all();
+        return view('formulario.paciente.listar-paciente',compact('paciente','ubicacion','eps'));
     }
 
     /**
@@ -47,10 +49,6 @@ class PacienteController extends Controller
         $paciente->acudiente_id=1;
         $paciente->save();
 
-
-
-
-
         alert()->success('El registro fue creado exitosamente.','En hora buena')->autoclose(6000);
         return redirect('paciente');
     }
@@ -74,7 +72,8 @@ class PacienteController extends Controller
      */
     public function edit($id)
     {
-        //
+        $paciente=Paciente::find($id);
+        return view('formulario.paciente.editar-paciente',compact('paciente'));
     }
 
     /**

@@ -32,7 +32,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-2">
+                                        <div class="col-md-3">
                                             <output id="list"></output>
                                         </div>
                                         <div class="col-md-6">
@@ -42,7 +42,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-5">
+                                        <div class="col-md-6">
                                         </div>
                                         <div class="col-md-6">
                                             <div class="input-group">

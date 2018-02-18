@@ -8,6 +8,7 @@ class Eps extends Model
 {
     use Notifiable;
     protected $table = 'eps';
+    protected $primaryKey='id';
     public $timestamps = false;
 
     protected  $fillable = [

@@ -8,6 +8,7 @@ class Ubicacion extends Model
 {
     use Notifiable;
     protected $table = 'ubicacion';
+    protected $primaryKey='id';
     public $timestamps = false;
 
     protected  $fillable = [

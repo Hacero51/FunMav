@@ -9,6 +9,7 @@ class Paciente extends Model
 {
     use Notifiable;
     protected $table = 'paciente';
+    protected $primaryKey='id';
     public $timestamps = false;
     protected $dates = ['foto'];
 
