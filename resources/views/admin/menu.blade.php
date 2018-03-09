@@ -2,7 +2,7 @@
     <ul class="list">
         <li class="header">MAIN NAVIGATION</li>
         <li @if ($menun1==0) class="active" @endif>
-            <a href="{{url('/')}}">
+            <a href="{{url('/inicioadmin')}}">
                 <i class="material-icons">home</i>
                 <span>Inicio</span>
             </a>

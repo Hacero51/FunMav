@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/inicioadmin', function () {
     return view('admin.inicio');
 });
 Route::get('/hv', function () {
@@ -63,6 +63,14 @@ Route::get('/eto', function () {
 Route::get('/admin', function () {
     return view('admin.usuarios.crear-usuario');
 });
+/*pagina de informacion*/
+Route::get('/','PrincipalController@index');
+Route::get('quienesomos','PrincipalController@quienes');
+Route::get('grupo','PrincipalController@grupo');
+Route::get('proyectos','PrincipalController@proyectos');
+Route::get('servicio','PrincipalController@servicio');
+Route::get('contacto','PrincipalController@contacto');
+Route::get('login','PrincipalController@login');
 
 Route::group([],function(){
     Route::resource('usuario','UsuarioController');
