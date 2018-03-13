@@ -768,21 +768,17 @@
 
         <div class="col-md-4">
             <section class="login-form">
-                <form method="post" action="#" role="login">
+                {!!Form::open(['route'=>'log.store', 'method'=>'POST', 'role'=>'login'])!!}
                     <img src="images/fundacion.jpg" class="img-responsive" alt="" />
-                    <input type="email" name="email" placeholder="Email" required class="form-control input-lg" />
+                        {!!Form::email('email',null,['class'=>'form-control input-lg', 'placeholder'=>'Ingresa tu correo'])!!}
 
-                    <input type="password" class="form-control input-lg" id="password" placeholder="Password" required="" />
+                        {!!Form::password('password',['class'=>'form-control input-lg', 'placeholder'=>'Ingresa tu contraseña'])!!}
 
-
-                    <div class="pwstrength_viewport_progress"></div>
-
-
-                    <button type="submit" name="go" class="btn btn-lg btn-primary btn-block">Sign in</button>
+                    {!!Form::submit('Entrar',['class'=>'btn btn-lg btn-primary btn-block','name'=>'go'])!!}
                     <div>
                         <a href="#">Create account</a> or <a href="#">reset password</a>
                     </div>
-                </form>
+                {!!Form::close()!!}
                 <div class="form-links">
                     <a href="#">www.funmav.com</a>
                 </div>

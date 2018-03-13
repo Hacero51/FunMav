@@ -1,12 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\User;
-use Illuminate\Http\Request;
+
+use Auth;
 use Session;
+use Redirect;
+use Illuminate\Http\Request;
+use App\Http\Requests\LoginRequest;
 
-
-class UsuarioController extends Controller
+class LogController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +17,7 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        $menu = 1;
-        $usuario =User::all();
-        return view('admin.usuarios.listar-usuario',compact('usuario'));
+        //
     }
 
     /**
@@ -27,7 +27,7 @@ class UsuarioController extends Controller
      */
     public function create()
     {
-        return view('admin.usuarios.crear-usuario');
+        //
     }
 
     /**
@@ -36,14 +36,12 @@ class UsuarioController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(LoginRequest $request)
     {
-
-        User::create($request->all());
-
-        alert()->success('El registro fue creado exitosamente.','En hora buena')->autoclose(6000);
-        return redirect('usuario');
-
+        if(Auth::attempt(['email'=>$request['email'], 'password'=>$request['password']])){
+            return Redirect::to('/inicioadmin');
+        }
+        return Redirect::to('/login');
     }
 
     /**
@@ -52,6 +50,12 @@ class UsuarioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+    public function logout(){
+        Auth::logout();
+        return Redirect::to('/');
+    }
+
     public function show($id)
     {
         //
@@ -63,12 +67,9 @@ class UsuarioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit( Request $request, $id)
+    public function edit($id)
     {
-        $usuario=User::find($id);
-
-        return view('admin.usuarios.editar-usuario',compact('usuario'));
-
+        //
     }
 
     /**
@@ -80,14 +81,7 @@ class UsuarioController extends Controller
      */
     public function update(Request $request, $id)
     {
-
-        $usuario=User::find($id);
-        //dd($usuario);
-        $usuario->fill($request->all());
-        $usuario->save();
-        Session::flash('message','El usuario: '.$usuario->nombres .' '.$usuario->apellidos.' fue actualizado exitosamente');
-        return redirect('usuario');
-
+        //
     }
 
     /**

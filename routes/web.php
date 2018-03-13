@@ -73,6 +73,10 @@ Route::get('contacto','PrincipalController@contacto');
 Route::get('login','PrincipalController@login');
 
 Route::group([],function(){
+    Route::resource('log','LogController');
+});
+
+Route::group([],function(){
     Route::resource('usuario','UsuarioController');
 });
 

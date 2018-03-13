@@ -14,8 +14,17 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-        'nombres', 'apellidos', 'documento','tipo_documento', 'dirrecion','telefono','email','usuario','contrasena','perfil',
+    protected  $fillable = [
+        'nombres',
+        'apellidos',
+        'documento',
+        'tipo_documento',
+        'dirrecion',
+        'telefono',
+        'email',
+        'usuario',
+        'password',
+        'perfil'
     ];
 
     /**
@@ -24,6 +33,15 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'contrasena', 'remember_token',
+        'password', 'remember_token',
     ];
+
+
+    public function setPasswordAttribute($value)
+    {
+        if( \Hash::needsRehash($value) ) {
+            $value = \Hash::make($value);
+        }
+        $this->attributes['password'] = $value;
+    }
 }
